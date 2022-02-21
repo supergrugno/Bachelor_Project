@@ -5079,9 +5079,9 @@ GameObject:
   - component: {fileID: 23081237}
   - component: {fileID: 23081236}
   - component: {fileID: 23081235}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Box (1)
-  m_TagString: PickUpObject
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5100,7 +5100,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 8
   m_CollisionDetection: 0
 --- !u!65 &23081236
 BoxCollider:
@@ -5148,7 +5148,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: c2fc96bc76338ed4c92fd20beb6f76d6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7036,6 +7036,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 316560743}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &348897585
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 348897586}
+  m_Layer: 0
+  m_Name: RayCaster
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &348897586
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348897585}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.75, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1481770091}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &349026152
 GameObject:
   m_ObjectHideFlags: 0
@@ -9456,7 +9487,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &744339911
 GameObject:
@@ -11335,9 +11366,9 @@ GameObject:
   - component: {fileID: 1121811251}
   - component: {fileID: 1121811250}
   - component: {fileID: 1121811249}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Box (2)
-  m_TagString: PickUpObject
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11356,7 +11387,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 8
   m_CollisionDetection: 0
 --- !u!65 &1121811250
 BoxCollider:
@@ -11560,9 +11591,9 @@ GameObject:
   - component: {fileID: 1159255571}
   - component: {fileID: 1159255570}
   - component: {fileID: 1159255569}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Box (3)
-  m_TagString: PickUpObject
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11581,7 +11612,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 8
   m_CollisionDetection: 0
 --- !u!65 &1159255570
 BoxCollider:
@@ -12075,7 +12106,7 @@ GameObject:
   - component: {fileID: 1216257694}
   - component: {fileID: 1216257693}
   m_Layer: 0
-  m_Name: r
+  m_Name: O2 bubble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12151,13 +12182,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1216257692}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 342.92, y: -0.02, z: 52.54}
-  m_LocalScale: {x: 15.390869, y: 15.390869, z: 15.390869}
+  m_LocalRotation: {x: -0, y: -0.70710576, z: 0, w: 0.70710784}
+  m_LocalPosition: {x: -0.092798255, y: -0.9011639, z: -1.028085}
+  m_LocalScale: {x: 4.8836956, y: 4.8836956, z: 4.8836956}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_Father: {fileID: 543450652981411634}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1219183999
 GameObject:
@@ -13120,7 +13151,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1370067705}
   m_Layer: 0
-  m_Name: Camera
+  m_Name: '* Camera'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14028,12 +14059,11 @@ GameObject:
   - component: {fileID: 1481770090}
   - component: {fileID: 1481770089}
   - component: {fileID: 1481770088}
-  - component: {fileID: 1481770094}
   - component: {fileID: 1481770092}
   - component: {fileID: 1481770093}
   - component: {fileID: 1481770095}
   m_Layer: 0
-  m_Name: PlayerPlaceholder
+  m_Name: '* PlayerPlaceholder'
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14117,8 +14147,9 @@ Transform:
   m_Children:
   - {fileID: 543450653365283768}
   - {fileID: 1852473079}
+  - {fileID: 348897586}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1481770092
 Rigidbody:
@@ -14134,7 +14165,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!114 &1481770093
 MonoBehaviour:
@@ -14153,19 +14184,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   jumpForce: 10
---- !u!65 &1481770094
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1481770087}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1481770095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14178,6 +14196,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91b2a7cb4aa0c4945bf76d8999a5f425, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickUPLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  rayCasterObj: {fileID: 348897585}
+  pickUpRange: 1
+  throwingForce: 4
+  Hand: {fileID: 1852473079}
 --- !u!1 &1525113212
 GameObject:
   m_ObjectHideFlags: 0
@@ -15197,7 +15222,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1852473079}
   m_Layer: 0
-  m_Name: InventorySlot
+  m_Name: InventorySlot (Hand)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15620,9 +15645,9 @@ GameObject:
   - component: {fileID: 1937367765}
   - component: {fileID: 1937367770}
   - component: {fileID: 1937367769}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Box
-  m_TagString: PickUpObject
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15660,7 +15685,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: de33e11e853c5c144ad6c63161242de2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15719,7 +15744,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 8
   m_CollisionDetection: 0
 --- !u!65 &1937367770
 BoxCollider:
@@ -15974,7 +15999,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7787081, y: 1}
+    m_SensorSize: {x: 1.7793103, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -16720,8 +16745,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1151388029037055594}
+  - {fileID: 1216257696}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!4 &543450653365283768
 Transform:
@@ -16814,7 +16840,7 @@ GameObject:
   - component: {fileID: 543450653365283768}
   - component: {fileID: 919132149363962115}
   m_Layer: 0
-  m_Name: ybot@Idle
+  m_Name: PlayerMesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

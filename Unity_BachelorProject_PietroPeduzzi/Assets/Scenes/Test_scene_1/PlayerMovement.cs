@@ -56,10 +56,20 @@ public class PlayerMovement : MonoBehaviour
         //player look direction
         if(Input.GetAxisRaw("Horizontal") != 0)
         {
-            gameObject.transform.localScale = new Vector3(Input.GetAxisRaw("Horizontal"), 1, 1);
+            if (Input.GetAxisRaw("Horizontal") < 0)
+            {
+                StaticValues.isLookingRight = false;
+                gameObject.transform.localScale = new Vector3(-1, 1, 1);
+            }
+            else if(Input.GetAxisRaw("Horizontal") > 0)
+            {
+                StaticValues.isLookingRight = true;
+                gameObject.transform.localScale = new Vector3(1, 1, 1);
+            }
         }
     }
 
+    /*
     private void JumpBehaviour()
     {
         bool jumpKeyPressed = Input.GetKeyDown(KeyCode.W);
@@ -71,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
             jumpVector.z = rb.velocity.z;
             rb.velocity = jumpVector;
         }
-    }
+    }*/
     private bool isGrounded()
     {
         bool isGrounded = Physics.Raycast(transform.position, -gameObject.transform.up, playerCollider.bounds.extents.y + 0.1f);
