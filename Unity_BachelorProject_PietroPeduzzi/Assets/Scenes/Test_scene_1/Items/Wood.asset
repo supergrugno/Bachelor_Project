@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b76f683f81c591941ae6b84fc0b37712, type: 3}
+  m_Name: Wood
+  m_EditorClassIdentifier: 
+  itemName: Wood
+  itemMesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+  itemMeshCollider: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+  itemMaterial: {fileID: 2100000, guid: c2fc96bc76338ed4c92fd20beb6f76d6, type: 2}
+  itemDescription: May be useful as burning material.
