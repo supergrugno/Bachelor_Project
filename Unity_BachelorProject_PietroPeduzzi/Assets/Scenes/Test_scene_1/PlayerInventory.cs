@@ -5,13 +5,19 @@ using UnityEngine;
 public class PlayerInventory : MonoBehaviour
 {
     [SerializeField] private LayerMask pickUPLayer;
+    [SerializeField] private LayerMask slotLayer;
     [SerializeField] private GameObject rayCasterObj;
     [SerializeField] private float pickUpRange;
     [SerializeField] private float throwingForce;
     [SerializeField] private Transform Hand;
 
+    private int rayCastModifier = 1;
+
     private Rigidbody CurrentObjectRigidBody;
     private Collider CurrentObjectCollider;
+
+    private Rigidbody floatingRigidBody = null;
+    private Collider floatingCollider = null;
 
 
     //animations
@@ -26,92 +32,128 @@ public class PlayerInventory : MonoBehaviour
 
     private void Update()
     {
+        CheckDirection();
         GetObject();
+    }
+
+    private void CheckDirection()
+    {
+        if (StaticValues.isLookingRight == true) rayCastModifier = 1;
+        else if (StaticValues.isLookingRight == false) rayCastModifier = -1;
     }
 
     private void GetObject()
     {
         if (Input.GetButtonDown("Interact"))
         {
-            if (StaticValues.isLookingRight == true)
+            Ray Pickupray = new Ray(rayCasterObj.transform.position, rayCastModifier * rayCasterObj.transform.right);
+
+            if (Physics.Raycast(Pickupray, out RaycastHit hitInfo_1, pickUpRange, pickUPLayer))
             {
-                Ray Pickupray = new Ray(rayCasterObj.transform.position, rayCasterObj.transform.right);
-
-                if (Physics.Raycast(Pickupray, out RaycastHit hitInfo, pickUpRange, pickUPLayer))
+                if (CurrentObjectRigidBody)
                 {
-                    if (CurrentObjectRigidBody)
-                    {
-                        CurrentObjectRigidBody.isKinematic = false;
-                        CurrentObjectCollider.enabled = true;
+                    //SWITCH object
+                    CurrentObjectRigidBody.isKinematic = false;
+                    CurrentObjectCollider.enabled = true;
 
-                        CurrentObjectRigidBody = hitInfo.rigidbody;
-                        CurrentObjectCollider = hitInfo.collider;
+                    CurrentObjectRigidBody = hitInfo_1.rigidbody;
+                    CurrentObjectCollider = hitInfo_1.collider;
 
-                        CurrentObjectRigidBody.isKinematic = true;
-                        CurrentObjectCollider.enabled = false;
+                    CurrentObjectRigidBody.isKinematic = true;
+                    CurrentObjectCollider.enabled = false;
 
-
-                        //animation
-                        animator.SetBool("Has Object", true);
-                        hasObjectInHand = true;
-                    }
-                    else
-                    {
-                        CurrentObjectRigidBody = hitInfo.rigidbody;
-                        CurrentObjectCollider = hitInfo.collider;
-
-                        CurrentObjectRigidBody.isKinematic = true;
-                        CurrentObjectCollider.enabled = false;
-
-
-                        //animation
-                        animator.SetBool("Has Object", true);
-                        hasObjectInHand = true;
-                    }
-
-                    return;
+                    //animation
+                    animator.SetBool("Has Object", true);
+                    hasObjectInHand = true;
                 }
-            }
-            else if(StaticValues.isLookingRight == false)
+                else
+                {
+                    //PICKUP object
+                    CurrentObjectRigidBody = hitInfo_1.rigidbody;
+                    CurrentObjectCollider = hitInfo_1.collider;
+
+                    CurrentObjectRigidBody.isKinematic = true;
+                    CurrentObjectCollider.enabled = false;
+
+
+                    //animation
+                    animator.SetBool("Has Object", true);
+                    hasObjectInHand = true;
+                }
+
+                return;
+
+            }else if(Physics.Raycast(Pickupray, out RaycastHit hitInfo_2, pickUpRange, slotLayer))
             {
-                Ray Pickupray = new Ray(rayCasterObj.transform.position, -rayCasterObj.transform.right);
-                if (Physics.Raycast(Pickupray, out RaycastHit hitInfo, pickUpRange, pickUPLayer))
+                SlotManager slotReference = hitInfo_2.transform.GetComponent<SlotManager>();
+                //crafting
+                if (CurrentObjectRigidBody && slotReference.slotIsFull == false)
                 {
-                    if (CurrentObjectRigidBody)
-                    {
-                        //SWITCH object
-                        CurrentObjectRigidBody.isKinematic = false;
-                        CurrentObjectCollider.enabled = true;
+                    //Debug.Log("added item to crafer");
+                    slotReference.slotIsFull = true;
 
-                        CurrentObjectRigidBody = hitInfo.rigidbody;
-                        CurrentObjectCollider = hitInfo.collider;
+                    slotReference.slotObjectRigidBody = CurrentObjectRigidBody;
+                    slotReference.slotObjectCollider = CurrentObjectCollider;
 
-                        CurrentObjectRigidBody.isKinematic = true;
-                        CurrentObjectCollider.enabled = false;
+                    slotReference.slotObjectRigidBody.isKinematic = true;
+                    slotReference.slotObjectCollider.enabled = false;
 
+                    CurrentObjectRigidBody = null;
+                    CurrentObjectCollider = null;
 
-                        //animation
-                        animator.SetBool("Has Object", true);
-                        hasObjectInHand = true;
-                    }
-                    else
-                    {
-                        //PICKUP object
-                        CurrentObjectRigidBody = hitInfo.rigidbody;
-                        CurrentObjectCollider = hitInfo.collider;
-
-                        CurrentObjectRigidBody.isKinematic = true;
-                        CurrentObjectCollider.enabled = false;
-
-
-                        //animation
-                        animator.SetBool("Has Object", true);
-                        hasObjectInHand = true;
-                    }
-
-                    return;
+                    //animation
+                    animator.SetBool("Has Object", false);
+                    hasObjectInHand = false;
                 }
+                else if(!CurrentObjectRigidBody && slotReference.slotIsFull == true)
+                {
+                    //Debug.Log("took item from crafer");
+
+                    CurrentObjectRigidBody = slotReference.slotObjectRigidBody;
+                    CurrentObjectCollider = slotReference.slotObjectCollider;
+
+                    CurrentObjectRigidBody.isKinematic = true;
+                    CurrentObjectCollider.enabled = false;
+
+                    slotReference.slotObjectRigidBody = null;
+                    slotReference.slotObjectCollider = null;
+
+                    //animation
+                    animator.SetBool("Has Object", true);
+                    hasObjectInHand = true;
+
+                    slotReference.slotIsFull = false;
+                }
+                else if (CurrentObjectRigidBody && slotReference.slotIsFull == true)
+                {
+                    //Debug.Log("switched item in crafer");
+
+                    floatingRigidBody = CurrentObjectRigidBody;
+                    floatingCollider = CurrentObjectCollider;
+
+                    CurrentObjectRigidBody = slotReference.slotObjectRigidBody;
+                    CurrentObjectCollider = slotReference.slotObjectCollider;
+
+                    CurrentObjectRigidBody.isKinematic = true;
+                    CurrentObjectCollider.enabled = false;
+
+                    slotReference.slotObjectRigidBody = floatingRigidBody;
+                    slotReference.slotObjectCollider = floatingCollider;
+
+                    slotReference.slotObjectRigidBody.isKinematic = true;
+                    slotReference.slotObjectCollider.enabled = false;
+
+                    floatingRigidBody = null;
+                    floatingCollider = null;
+
+                    //animation
+                    animator.SetBool("Has Object", true);
+                    hasObjectInHand = true;
+                }
+
+                 return;
             }
+            
 
             // DROP object
             if (CurrentObjectRigidBody)
@@ -130,6 +172,7 @@ public class PlayerInventory : MonoBehaviour
 
         if (Input.GetButtonDown("Action"))
         {
+            //THROW object
             if (CurrentObjectRigidBody)
             {
                 CurrentObjectRigidBody.isKinematic = false;
