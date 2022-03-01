@@ -56,11 +56,15 @@ public class PlayerInventory : MonoBehaviour
                     CurrentObjectRigidBody.isKinematic = false;
                     CurrentObjectCollider.enabled = true;
 
+                    CurrentObjectRigidBody.constraints = RigidbodyConstraints.FreezePositionZ;
+
                     CurrentObjectRigidBody = hitInfo_1.rigidbody;
                     CurrentObjectCollider = hitInfo_1.collider;
 
                     CurrentObjectRigidBody.isKinematic = true;
                     CurrentObjectCollider.enabled = false;
+
+                    CurrentObjectRigidBody.constraints = RigidbodyConstraints.None;
 
                     //animation
                     animator.SetBool("Has Object", true);
@@ -75,6 +79,7 @@ public class PlayerInventory : MonoBehaviour
                     CurrentObjectRigidBody.isKinematic = true;
                     CurrentObjectCollider.enabled = false;
 
+                    CurrentObjectRigidBody.constraints = RigidbodyConstraints.None;
 
                     //animation
                     animator.SetBool("Has Object", true);
@@ -98,6 +103,8 @@ public class PlayerInventory : MonoBehaviour
                     slotReference.slotObjectRigidBody.isKinematic = true;
                     slotReference.slotObjectCollider.enabled = false;
 
+                    CurrentObjectRigidBody.constraints = RigidbodyConstraints.None;
+
                     CurrentObjectRigidBody = null;
                     CurrentObjectCollider = null;
 
@@ -114,6 +121,8 @@ public class PlayerInventory : MonoBehaviour
 
                     CurrentObjectRigidBody.isKinematic = true;
                     CurrentObjectCollider.enabled = false;
+
+                    CurrentObjectRigidBody.constraints = RigidbodyConstraints.None;
 
                     slotReference.slotObjectRigidBody = null;
                     slotReference.slotObjectCollider = null;
@@ -137,11 +146,15 @@ public class PlayerInventory : MonoBehaviour
                     CurrentObjectRigidBody.isKinematic = true;
                     CurrentObjectCollider.enabled = false;
 
+                    CurrentObjectRigidBody.constraints = RigidbodyConstraints.None;
+
                     slotReference.slotObjectRigidBody = floatingRigidBody;
                     slotReference.slotObjectCollider = floatingCollider;
 
                     slotReference.slotObjectRigidBody.isKinematic = true;
                     slotReference.slotObjectCollider.enabled = false;
+
+                    CurrentObjectRigidBody.constraints = RigidbodyConstraints.None;
 
                     floatingRigidBody = null;
                     floatingCollider = null;
@@ -161,6 +174,8 @@ public class PlayerInventory : MonoBehaviour
                 CurrentObjectRigidBody.isKinematic = false;
                 CurrentObjectCollider.enabled = true;
 
+                CurrentObjectRigidBody.constraints = RigidbodyConstraints.FreezePositionZ;
+
                 //animation
                 animator.SetBool("Has Object", false);
                 hasObjectInHand = false;
@@ -177,6 +192,8 @@ public class PlayerInventory : MonoBehaviour
             {
                 CurrentObjectRigidBody.isKinematic = false;
                 CurrentObjectCollider.enabled = true;
+
+                CurrentObjectRigidBody.constraints = RigidbodyConstraints.FreezePositionZ;
 
                 if (StaticValues.isLookingRight == true) CurrentObjectRigidBody.AddForce((Hand.right + Hand.up) * throwingForce, ForceMode.Impulse);
                 else if (StaticValues.isLookingRight == false) CurrentObjectRigidBody.AddForce((-Hand.right + Hand.up) * throwingForce, ForceMode.Impulse);
