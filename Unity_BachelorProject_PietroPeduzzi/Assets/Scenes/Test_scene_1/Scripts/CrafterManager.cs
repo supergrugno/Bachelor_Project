@@ -6,6 +6,8 @@ using System;
 
 public class CrafterManager : MonoBehaviour
 {
+    [SerializeField] private GameObject itemBlueprint;
+
     public CraftingRecipesTemplate[] recipes;
 
     public GameObject[] itemSlots;
@@ -56,6 +58,17 @@ public class CrafterManager : MonoBehaviour
             if (isEqual)
             {
                 Debug.Log("AAAAAAAAAAAAAAAAAAAAAA--------------------------------------------------------------");
+                foreach (var item3 in itemSlots)
+                {
+                    SlotManager slotRB = item3.GetComponent<SlotManager>();
+                    Destroy(slotRB.slotObjectRigidBody.gameObject);
+
+                    slotRB.slotIsFull = false;
+                    slotRB.slotObjectRigidBody = null;
+                    slotRB.slotObjectCollider = null;
+                }
+                GameObject newItem = Instantiate(itemBlueprint, new Vector3(transform.position.x, transform.position.y, 50), Quaternion.identity);
+                newItem.GetComponent<ItemDisplay>().item = recipes[System.Array.IndexOf(recipes, item)].itemResult;
             }
         }
     }
