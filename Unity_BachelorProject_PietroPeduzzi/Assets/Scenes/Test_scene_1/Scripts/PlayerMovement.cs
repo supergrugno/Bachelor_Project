@@ -21,10 +21,14 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpForce;
     private CapsuleCollider playerCollider;
 
+    //others
+    public bool _isDigging = false;
+
     private void Start()
     {
         rb = this.gameObject.GetComponent<Rigidbody>();
         playerCollider = gameObject.GetComponent<CapsuleCollider>();
+        _isDigging = false;
 
         //animations
         animator = GetComponentInChildren<Animator>();
@@ -43,6 +47,7 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         SideMovement();
+        Digging();
     }
 
     private void SideMovement()
@@ -66,6 +71,19 @@ public class PlayerMovement : MonoBehaviour
                 StaticValues.isLookingRight = true;
                 gameObject.transform.localScale = new Vector3(1, 1, 1);
             }
+        }
+    }
+
+    private void Digging()
+    {
+        if (Input.GetButton("Action") && rb.velocity.magnitude == 0)
+        {
+            animator.SetBool("IsDigging", true);
+            _isDigging = true;
+        }else
+        {
+            animator.SetBool("IsDigging", false);
+            _isDigging = false;
         }
     }
 

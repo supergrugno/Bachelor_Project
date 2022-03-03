@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Stone
   m_EditorClassIdentifier: 
   itemName: Stone
-  itemMesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
-  itemMeshCollider: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  itemMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  itemMeshCollider: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   itemMaterial: {fileID: -4565884009001823619, guid: e4f6d71730a92fd4cabb18eeb65f6b2b, type: 3}
   itemDescription: A piece of stone.

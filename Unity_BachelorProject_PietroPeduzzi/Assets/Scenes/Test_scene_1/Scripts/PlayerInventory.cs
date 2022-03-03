@@ -68,6 +68,7 @@ public class PlayerInventory : MonoBehaviour
 
                     //animation
                     animator.SetBool("Has Object", true);
+                    animator.SetTrigger("PickUp");
                     hasObjectInHand = true;
                 }
                 else
@@ -83,6 +84,7 @@ public class PlayerInventory : MonoBehaviour
 
                     //animation
                     animator.SetBool("Has Object", true);
+                    animator.SetTrigger("PickUp");
                     hasObjectInHand = true;
                 }
 
@@ -129,6 +131,7 @@ public class PlayerInventory : MonoBehaviour
 
                     //animation
                     animator.SetBool("Has Object", true);
+                    animator.SetTrigger("PickUp");
                     hasObjectInHand = true;
 
                     slotReference.slotIsFull = false;
@@ -161,6 +164,7 @@ public class PlayerInventory : MonoBehaviour
 
                     //animation
                     animator.SetBool("Has Object", true);
+                    animator.SetTrigger("PickUp");
                     hasObjectInHand = true;
                 }
 
