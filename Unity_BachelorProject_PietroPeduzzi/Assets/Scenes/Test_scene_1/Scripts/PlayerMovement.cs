@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        //JumpBehaviour();
+        JumpBehaviour();
 
         //animations
         animVelocity = rb.velocity.magnitude;
@@ -86,23 +86,21 @@ public class PlayerMovement : MonoBehaviour
             _isDigging = false;
         }
     }
-
-    /*
+    
     private void JumpBehaviour()
     {
-        bool jumpKeyPressed = Input.GetKeyDown(KeyCode.W);
-
-        if (jumpKeyPressed && isGrounded())
+        if (Input.GetKeyDown(KeyCode.W) && isGrounded())
         {
             Vector3 jumpVector = Vector3.up * jumpForce;
             jumpVector.x = rb.velocity.x;
             jumpVector.z = rb.velocity.z;
             rb.velocity = jumpVector;
         }
-    }*/
+    }
+
     private bool isGrounded()
     {
-        bool isGrounded = Physics.Raycast(transform.position, -gameObject.transform.up, playerCollider.bounds.extents.y + 0.1f);
+        bool isGrounded = Physics.Raycast(transform.position, -gameObject.transform.up, playerCollider.bounds.extents.y + 0.1f, groundLayers);
         return isGrounded;
     }
 }

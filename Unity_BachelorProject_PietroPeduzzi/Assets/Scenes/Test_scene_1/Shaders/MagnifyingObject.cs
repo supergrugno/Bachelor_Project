@@ -27,7 +27,6 @@ public class MagnifyingObject : MonoBehaviour
     private void Update()
     {
         Zoom();
-
     }
 
 

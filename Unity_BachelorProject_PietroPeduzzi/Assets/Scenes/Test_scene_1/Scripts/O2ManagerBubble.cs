@@ -8,6 +8,7 @@ public class O2ManagerBubble : MonoBehaviour
     [SerializeField] private float maxOxygen = 200;
 
     [SerializeField] PlayerO2Manager playerO2ManagerReference;
+    [SerializeField] GameObject O2_BubbleHead;
     private bool playerIsInBubble = false;
 
     private void Start()
@@ -41,11 +42,19 @@ public class O2ManagerBubble : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player") playerIsInBubble = true;
+        if (other.tag == "Player")
+        {
+            playerIsInBubble = true;
+            O2_BubbleHead.GetComponent<Animator>().SetTrigger("Deactivate");
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Player") playerIsInBubble = false;
+        if (other.tag == "Player")
+        {
+            playerIsInBubble = false;
+            O2_BubbleHead.GetComponent<Animator>().SetTrigger("Activate");
+        }
     }
 }
