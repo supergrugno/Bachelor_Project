@@ -6175,7 +6175,7 @@ GameObject:
   - component: {fileID: 194674287}
   - component: {fileID: 194674288}
   - component: {fileID: 194674289}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: RockFormation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
