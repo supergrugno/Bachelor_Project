@@ -8,6 +8,8 @@ public class O2PlayerBubble : MonoBehaviour
     [SerializeField] private float minSize = 0.3f;
     private float actualSize = 1;
 
+    public PlayerO2Manager playerO2ManagerReference;
+
     public GameObject O2_bubble;
     private Renderer _renderer;
 
@@ -18,7 +20,7 @@ public class O2PlayerBubble : MonoBehaviour
 
     private void Update()
     {
-        actualSize = maxSize / 10 * StaticValues.oxygenOnPlayer;
+        actualSize = maxSize / playerO2ManagerReference.playerMaxOxygen * StaticValues.oxygenOnPlayer;
         if (actualSize > minSize)
         {
             gameObject.transform.localScale = new Vector3(actualSize, actualSize, actualSize);

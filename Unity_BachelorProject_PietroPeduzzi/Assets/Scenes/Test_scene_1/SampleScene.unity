@@ -6373,6 +6373,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSize: 1
   minSize: 0.5
+  playerO2ManagerReference: {fileID: 1481770096}
   O2_bubble: {fileID: 1332762541}
 --- !u!1 &227668701
 GameObject:
@@ -14528,8 +14529,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0102966a134fd024985675df794db178, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerStartOxygen: 10
-  playerMaxOxygen: 10
+  playerStartOxygen: 20
+  playerMaxOxygen: 20
   oxygenDeploySpeed: 1
 --- !u!1 &1525113212
 GameObject:
@@ -19259,8 +19260,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64fd404c873cb804baa0125e24761e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BubbleStartOxygen: 100
-  maxOxygen: 200
+  BubbleStartOxygen: 300
+  maxOxygen: 400
   playerO2ManagerReference: {fileID: 0}
   O2_BubbleHead: {fileID: 1332762541}
 --- !u!1 &4517143048502510337

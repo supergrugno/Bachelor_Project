@@ -89,7 +89,7 @@ public class PlayerMovement : MonoBehaviour
     
     private void JumpBehaviour()
     {
-        if (Input.GetKeyDown(KeyCode.W) && isGrounded())
+        if (Input.GetButtonDown("Jump") && isGrounded())
         {
             Vector3 jumpVector = Vector3.up * jumpForce;
             jumpVector.x = rb.velocity.x;
