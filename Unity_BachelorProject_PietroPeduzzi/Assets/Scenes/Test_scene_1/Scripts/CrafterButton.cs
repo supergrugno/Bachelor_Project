@@ -10,6 +10,30 @@ public class CrafterButton : MonoBehaviour
     [SerializeField] private float NecessaryPressTime = 2;
     private float actualTimePressed;
     private bool buttonHasBeenPressed = false;
+    private GameObject player;
+
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
+
+    private void Update()
+    {
+        if (player.GetComponent<PlayerMovement>()._isPressingButton)
+        {
+            actualTimePressed += Time.deltaTime;
+            if (actualTimePressed >= NecessaryPressTime && buttonHasBeenPressed == false)
+            {
+                ifButtonIsPressedEvent.Invoke();
+                buttonHasBeenPressed = true;
+            }
+        }
+        else if (!player.GetComponent<PlayerMovement>()._isPressingButton)
+        {
+            actualTimePressed = 0;
+            buttonHasBeenPressed = false;
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -21,7 +45,7 @@ public class CrafterButton : MonoBehaviour
         if (other.tag == "Player") other.GetComponent<PlayerMovement>()._canPressButton = false;
     }
 
-    private void OnTriggerStay(Collider other)
+    /*private void OnTriggerStay(Collider other)
     {
         if (other.tag == "Player")
         {
@@ -40,5 +64,5 @@ public class CrafterButton : MonoBehaviour
                 buttonHasBeenPressed = false;
             }
         }
-    }
+    }*/
 }

@@ -53,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
         SideMovement();
 
         if(_canDig) Digging();
-        else if (_canPressButton) PressingButton();
+        if (_canPressButton) PressingButton();
     }
 
     private void SideMovement()
@@ -82,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Digging()
     {
-        if (Input.GetButton("Action") && rb.velocity.magnitude == 0)
+        if (Input.GetButton("Action") && rb.velocity.magnitude <= 0.1f)
         {
             animator.SetBool("IsDigging", true);
             _isDigging = true;
@@ -95,7 +95,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void PressingButton()
     {
-        if (Input.GetButton("Action") && rb.velocity.magnitude == 0)
+        if (Input.GetButton("Action") && rb.velocity.magnitude <= 0.1f)
         {
             animator.SetBool("IsPressingButton", true);
             _isPressingButton = true;
