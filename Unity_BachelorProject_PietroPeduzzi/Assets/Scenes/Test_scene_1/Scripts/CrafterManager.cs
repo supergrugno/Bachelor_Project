@@ -25,10 +25,7 @@ public class CrafterManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            Craft();
-        }
+
     }
 
     public void Craft()
