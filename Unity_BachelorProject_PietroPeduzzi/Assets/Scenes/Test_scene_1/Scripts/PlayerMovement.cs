@@ -22,7 +22,9 @@ public class PlayerMovement : MonoBehaviour
     private CapsuleCollider playerCollider;
 
     //others
+    public bool _canDig = false;
     public bool _isDigging = false;
+    public bool _canPressButton = false;
     public bool _isPressingButton = false;
 
     private void Start()
@@ -49,8 +51,9 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         SideMovement();
-        //Digging();
-        PressingButton();
+
+        if(_canDig) Digging();
+        else if (_canPressButton) PressingButton();
     }
 
     private void SideMovement()

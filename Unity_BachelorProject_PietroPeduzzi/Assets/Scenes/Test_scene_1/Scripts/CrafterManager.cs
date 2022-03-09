@@ -27,11 +27,16 @@ public class CrafterManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
-            CompleteRecepy();
-            //after each check the items array is reset
-            //items in the array will appear in same order as the item slots that contain them
-            ClearArray();
+            Craft();
         }
+    }
+
+    public void Craft()
+    {
+        CompleteRecepy();
+        //after each check the items array is reset
+        //items in the array will appear in same order as the item slots that contain them
+        ClearArray();
     }
 
     public void CompleteRecepy()

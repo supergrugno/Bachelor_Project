@@ -21,7 +21,17 @@ public class MaterialHolder : MonoBehaviour
         playerObj = GameObject.FindGameObjectWithTag("Player");
         playerMovementReference = playerObj.GetComponent<PlayerMovement>();
 
-        itemBlueprint.GetComponent<ItemDisplay>().item = itemProduced;
+        //itemBlueprint.GetComponent<ItemDisplay>().item = itemProduced;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player") other.GetComponent<PlayerMovement>()._canDig = true;
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player") other.GetComponent<PlayerMovement>()._canDig = false;
     }
 
     private void OnTriggerStay(Collider other)
@@ -46,6 +56,7 @@ public class MaterialHolder : MonoBehaviour
         totalMaterialsMined += 1;
 
         GameObject newItem = Instantiate(itemBlueprint, new Vector3(transform.position.x, transform.position.y + 0.5f, 50), Quaternion.identity);
+        newItem.GetComponent<ItemDisplay>().item = itemProduced;
         newItem.GetComponent<Rigidbody>().AddForce((gameObject.transform.right + gameObject.transform.up), ForceMode.Impulse);
     }
 }
