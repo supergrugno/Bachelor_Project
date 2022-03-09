@@ -23,12 +23,14 @@ public class PlayerMovement : MonoBehaviour
 
     //others
     public bool _isDigging = false;
+    public bool _isPressingButton = false;
 
     private void Start()
     {
         rb = this.gameObject.GetComponent<Rigidbody>();
         playerCollider = gameObject.GetComponent<CapsuleCollider>();
         _isDigging = false;
+        _isPressingButton = false;
 
         //animations
         animator = GetComponentInChildren<Animator>();
@@ -47,7 +49,8 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         SideMovement();
-        Digging();
+        //Digging();
+        PressingButton();
     }
 
     private void SideMovement()
@@ -86,6 +89,20 @@ public class PlayerMovement : MonoBehaviour
             _isDigging = false;
         }
     }
+
+    private void PressingButton()
+    {
+        if (Input.GetButton("Action") && rb.velocity.magnitude == 0)
+        {
+            animator.SetBool("IsPressingButton", true);
+            _isPressingButton = true;
+        }
+        else
+        {
+            animator.SetBool("IsPressingButton", false);
+            _isPressingButton = false;
+        }
+    }
     
     private void JumpBehaviour()
     {
@@ -100,7 +117,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool isGrounded()
     {
-        bool isGrounded = Physics.Raycast(transform.position, -gameObject.transform.up, playerCollider.bounds.extents.y + 0.1f, groundLayers);
+        bool isGrounded = Physics.Raycast(transform.position, -gameObject.transform.up, playerCollider.bounds.extents.y + 0.5f, groundLayers);
         return isGrounded;
     }
 }
