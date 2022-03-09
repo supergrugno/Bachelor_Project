@@ -6069,6 +6069,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 144588674}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &168654805
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 168654806}
+  m_Layer: 0
+  m_Name: PlayerAsChildSlot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &168654806
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168654805}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 543450652981411634}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &184448075
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16968,7 +16999,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7771084, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -18309,6 +18340,7 @@ Transform:
   - {fileID: 2104771947}
   - {fileID: 1912246740}
   - {fileID: 84181623}
+  - {fileID: 168654806}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
@@ -18450,6 +18482,8 @@ GameObject:
   m_Component:
   - component: {fileID: 543450652981411634}
   - component: {fileID: 919132148707452297}
+  - component: {fileID: 919132148707452298}
+  - component: {fileID: 919132148707452299}
   m_Layer: 0
   m_Name: PackAnimal
   m_TagString: Untagged
@@ -18470,6 +18504,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animalSpeed: 1
+--- !u!65 &919132148707452298
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148707452296}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5051231, y: 4.2176046, z: 8.251007}
+  m_Center: {x: 1.666404, y: 0.4899552, z: -0.010580063}
+--- !u!114 &919132148707452299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148707452296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d84c330ffabb71a489f7c680f63d959d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerAsChildSlot: {fileID: 168654805}
 --- !u!1 &919132149363962114
 GameObject:
   m_ObjectHideFlags: 0
