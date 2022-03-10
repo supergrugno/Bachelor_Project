@@ -13,7 +13,7 @@ public class MaterialHolder : MonoBehaviour
     public int maxMaterials = 2;
     private int totalMaterialsMined = 0;
 
-    private float loadBarMax = 1000;
+    public float loadBarMax = 5;
     private float loadBarState = 0;
 
     private void Start()
@@ -40,7 +40,7 @@ public class MaterialHolder : MonoBehaviour
         {
             if (playerMovementReference._isDigging)
             {
-                loadBarState += 1 * StaticValues.miningSpeed;
+                loadBarState += Time.deltaTime * StaticValues.miningSpeed;
                 if(loadBarState >= loadBarMax)
                 {
                     DropReource();

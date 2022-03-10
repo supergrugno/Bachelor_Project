@@ -13,16 +13,17 @@ public class PlayerInventory : MonoBehaviour
 
     private int rayCastModifier = 1;
 
-    private Rigidbody CurrentObjectRigidBody;
-    private Collider CurrentObjectCollider;
+    public Rigidbody CurrentObjectRigidBody;
+    //public Rigidbody LastCurrentObjectRigidBody;
+    public Collider CurrentObjectCollider;
 
     private Rigidbody floatingRigidBody = null;
     private Collider floatingCollider = null;
 
 
     //animations
-    private Animator animator;
-    private bool hasObjectInHand;
+    public Animator animator;
+    public bool hasObjectInHand;
 
 
     private void Start()
@@ -55,6 +56,7 @@ public class PlayerInventory : MonoBehaviour
                     //SWITCH object
                     CurrentObjectRigidBody.isKinematic = false;
                     CurrentObjectCollider.enabled = true;
+                    //LastCurrentObjectRigidBody = CurrentObjectRigidBody;
 
                     CurrentObjectRigidBody.constraints = RigidbodyConstraints.FreezePositionZ;
 
@@ -177,6 +179,7 @@ public class PlayerInventory : MonoBehaviour
             {
                 CurrentObjectRigidBody.isKinematic = false;
                 CurrentObjectCollider.enabled = true;
+                //LastCurrentObjectRigidBody = CurrentObjectRigidBody;
 
                 CurrentObjectRigidBody.constraints = RigidbodyConstraints.FreezePositionZ;
 
@@ -196,6 +199,7 @@ public class PlayerInventory : MonoBehaviour
             {
                 CurrentObjectRigidBody.isKinematic = false;
                 CurrentObjectCollider.enabled = true;
+                //LastCurrentObjectRigidBody = CurrentObjectRigidBody;
 
                 CurrentObjectRigidBody.constraints = RigidbodyConstraints.FreezePositionZ;
 

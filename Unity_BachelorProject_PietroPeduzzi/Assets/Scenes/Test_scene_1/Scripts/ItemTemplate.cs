@@ -5,6 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName ="New Item", menuName = "Pickup Item")]
 public class ItemTemplate : ScriptableObject
 {
+    public GameObject crafterPrefab;
+
     public string itemName;
     public Mesh itemMesh;
     public Mesh itemMeshCollider;

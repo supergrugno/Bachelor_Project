@@ -6,6 +6,19 @@ using System;
 
 public class CrafterManager : MonoBehaviour
 {
+    //PLACING AND REMOVING CRAFTER
+    //crafter as item reference
+    [SerializeField] ItemTemplate crafterAsItemTemplate;
+    private CrafterPlatformManager crafterPlatformManagerReference;
+    //player references
+    private GameObject playerObj;
+    private PlayerMovement playerMovementReference;
+
+    public float loadBarMax = 5;
+    private float loadBarState = 0;
+
+    //-----------------------------------------------------------------------------------------------------------------------------
+    //CRAFTING
     //blanck item for result
     [SerializeField] private GameObject itemBlueprint;
 
@@ -23,11 +36,15 @@ public class CrafterManager : MonoBehaviour
 
     private bool recepyIsCorrect = false;
 
-    private void Update()
+    private void Start()
     {
-
+        playerObj = GameObject.FindGameObjectWithTag("Player");
+        playerMovementReference = playerObj.GetComponent<PlayerMovement>();
+        crafterPlatformManagerReference = gameObject.transform.parent.GetComponentInParent<CrafterPlatformManager>();
     }
 
+    //CRAFTING
+    //------------------------------------------------------------------------------------------------------------------------------------------------
     public void Craft()
     {
         CompleteRecepy();
@@ -94,4 +111,59 @@ public class CrafterManager : MonoBehaviour
         _itemsInSlot = _itemsInSlotVoid;
     }
 
+
+    //REMOVING CRAFTER
+    //------------------------------------------------------------------------------------------------------------------------------------------------
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player") other.GetComponent<PlayerMovement>()._canDig = true;
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player") other.GetComponent<PlayerMovement>()._canDig = false;
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject == playerObj)
+        {
+            if (playerMovementReference._isDigging)
+            {
+                loadBarState += Time.deltaTime * StaticValues.miningSpeed;
+                if (loadBarState >= loadBarMax)
+                {
+                    DropCrafter();
+                    loadBarState = 0;
+                }
+            }
+            else
+            {
+                loadBarState = 0;
+            }
+        }
+    }
+
+    private void DropCrafter()
+    {
+        Debug.Log("Crafter has been dropped");
+
+        GameObject newItem = Instantiate(itemBlueprint, new Vector3(transform.position.x, transform.position.y + 0.5f, 50), Quaternion.identity);
+        newItem.GetComponent<ItemDisplay>().item = crafterAsItemTemplate;
+        newItem.GetComponent<Rigidbody>().AddForce((gameObject.transform.right + gameObject.transform.up), ForceMode.Impulse);
+        crafterPlatformManagerReference.platformIsFull = false;
+
+        foreach (var item in itemSlots)
+        {
+            if (item.GetComponent<SlotManager>().slotIsFull)
+            {
+                GameObject newItem_2 = Instantiate(itemBlueprint, new Vector3(transform.position.x, transform.position.y + 0.5f, 50), Quaternion.identity);
+                newItem_2.GetComponent<ItemDisplay>().item = item.GetComponent<SlotManager>().itemInSlot;
+                newItem_2.GetComponent<Rigidbody>().AddForce((gameObject.transform.right + gameObject.transform.up), ForceMode.Impulse);
+                Destroy(item.GetComponent<SlotManager>().slotObjectRigidBody.gameObject);
+            }
+        }
+
+        Destroy(gameObject);
+    }
 }
