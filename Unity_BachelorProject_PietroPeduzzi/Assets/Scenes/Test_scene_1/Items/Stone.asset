@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b76f683f81c591941ae6b84fc0b37712, type: 3}
   m_Name: Stone
   m_EditorClassIdentifier: 
+  crafterPrefab: {fileID: 0}
   itemName: Stone
-  itemMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  itemMesh: {fileID: -5495902117074765545, guid: 7b8df67aac3a7954f9ce7d3705c491fd, type: 3}
   itemMeshCollider: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-  itemMaterial: {fileID: -4565884009001823619, guid: e4f6d71730a92fd4cabb18eeb65f6b2b, type: 3}
+  itemMaterial: {fileID: -3846018093981099296, guid: 7b8df67aac3a7954f9ce7d3705c491fd, type: 3}
   itemDescription: A piece of stone.
