@@ -34,7 +34,7 @@ public class CrafterManager : MonoBehaviour
     public ItemTemplate[] _itemsInSlot;
     public ItemTemplate[] _itemsInSlotVoid;
 
-    private bool recepyIsCorrect = false;
+    //private bool recepyIsCorrect = false;
 
     private void Start()
     {
