@@ -5,10 +5,12 @@ using UnityEngine.Events;
 
 public class CrafterButton : MonoBehaviour
 {
-    public UnityEvent ifButtonIsPressedEvent;
+    [SerializeField] private UnityEvent ifButtonIsPressedEvent;
+    public ReduceO2 ReduceO2reference;
 
     [SerializeField] private float NecessaryPressTime = 2;
     private float actualTimePressed;
+    private bool playerIsOnThisButton = false;
     private bool buttonHasBeenPressed = false;
     private GameObject player;
 
@@ -22,7 +24,7 @@ public class CrafterButton : MonoBehaviour
         if (player.GetComponent<PlayerMovement>()._isPressingButton)
         {
             actualTimePressed += Time.deltaTime;
-            if (actualTimePressed >= NecessaryPressTime && buttonHasBeenPressed == false)
+            if (actualTimePressed >= NecessaryPressTime && buttonHasBeenPressed == false && playerIsOnThisButton)
             {
                 ifButtonIsPressedEvent.Invoke();
                 buttonHasBeenPressed = true;
@@ -37,12 +39,20 @@ public class CrafterButton : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player") other.GetComponent<PlayerMovement>()._canPressButton = true;
+        if (other.tag == "Player")
+        {
+            other.GetComponent<PlayerMovement>()._canPressButton = true;
+            playerIsOnThisButton = true;
+        } 
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Player") other.GetComponent<PlayerMovement>()._canPressButton = false;
+        if (other.tag == "Player")
+        {
+            other.GetComponent<PlayerMovement>()._canPressButton = false;
+            playerIsOnThisButton = false;
+        }
     }
 
     /*private void OnTriggerStay(Collider other)

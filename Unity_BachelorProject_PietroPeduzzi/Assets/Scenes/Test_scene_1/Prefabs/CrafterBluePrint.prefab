@@ -354,6 +354,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ad98c9639975e42b1bd4ec7a7f77a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  crafterAsItemTemplate: {fileID: 0}
+  loadBarMax: 5
   itemBlueprint: {fileID: 670533420319201480, guid: 198aaf1cce2d76b439fa68e0f2d0cea2, type: 3}
   recipes:
   - {fileID: 11400000, guid: f890daf867e40574da5ae08489b362e8, type: 2}

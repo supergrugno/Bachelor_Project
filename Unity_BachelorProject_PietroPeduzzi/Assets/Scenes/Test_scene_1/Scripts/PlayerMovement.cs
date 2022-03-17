@@ -109,12 +109,20 @@ public class PlayerMovement : MonoBehaviour
     
     private void JumpBehaviour()
     {
+        if (isGrounded())
+        {
+            //animation
+            animator.SetBool("IsJumping", false);
+        }
         if (Input.GetButtonDown("Jump") && isGrounded())
         {
             Vector3 jumpVector = Vector3.up * jumpForce;
             jumpVector.x = rb.velocity.x;
             jumpVector.z = rb.velocity.z;
             rb.velocity = jumpVector;
+
+            //animation
+            animator.SetBool("IsJumping", true);
         }
     }
 
