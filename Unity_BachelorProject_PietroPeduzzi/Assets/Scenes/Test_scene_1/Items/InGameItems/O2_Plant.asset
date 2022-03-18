@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: O2_Plant
   m_EditorClassIdentifier: 
   crafterPrefab: {fileID: 0}
-  itemName: A real Plant
-  itemMesh: {fileID: 2540817853737639666, guid: 061e066abcfcc9f42aced67ae0ab1409, type: 3}
-  itemMeshCollider: {fileID: 2540817853737639666, guid: 061e066abcfcc9f42aced67ae0ab1409, type: 3}
+  itemName: Plant in a pot
+  itemMesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  itemMeshCollider: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
   itemMaterial: {fileID: 2100000, guid: ddbacd46d7de44e41bed5c6a6d0fdadb, type: 2}
   itemDescription: This plant will produce O2 overtime if placed in a chest.

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crafterPrefab: {fileID: 0}
   itemName: O2 Fan
-  itemMesh: {fileID: 2540817853737639666, guid: 061e066abcfcc9f42aced67ae0ab1409, type: 3}
-  itemMeshCollider: {fileID: 2540817853737639666, guid: 061e066abcfcc9f42aced67ae0ab1409, type: 3}
+  itemMesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  itemMeshCollider: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
   itemMaterial: {fileID: 2100000, guid: 1e1ce666cae4a794684cd129aac249d0, type: 2}
   itemDescription: If placed in a chest this object will consume O2 overtime.

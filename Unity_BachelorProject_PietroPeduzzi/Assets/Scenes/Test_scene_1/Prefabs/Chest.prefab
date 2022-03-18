@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 485388715635520876}
   - component: {fileID: 485388715635520875}
   - component: {fileID: 485388715635520878}
+  - component: {fileID: 6204331066770064068}
   m_Layer: 7
   m_Name: Slot (2)
   m_TagString: Untagged
@@ -115,6 +116,22 @@ MonoBehaviour:
   slotObjectRigidBody: {fileID: 0}
   slotObjectCollider: {fileID: 0}
   itemInSlot: {fileID: 0}
+--- !u!114 &6204331066770064068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485388715635520873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f8f42e2daf1214783965191858a4cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slotManagerReference: {fileID: 485388715635520878}
+  O2plantTemplate: {fileID: 11400000, guid: 4544f615dd5f4e44288c12ab88b73863, type: 2}
+  O2fanTemplate: {fileID: 11400000, guid: a9fe4ce63f9761a40a3dd206377c94c0, type: 2}
+  oxygenOverTime: 2
 --- !u!1 &485388715679092692
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,6 +265,7 @@ GameObject:
   - component: {fileID: 485388715849286146}
   - component: {fileID: 485388715849286145}
   - component: {fileID: 485388715849286149}
+  - component: {fileID: 7177983370662741955}
   m_Layer: 7
   m_Name: Slot (1)
   m_TagString: Untagged
@@ -350,6 +368,22 @@ MonoBehaviour:
   slotObjectRigidBody: {fileID: 0}
   slotObjectCollider: {fileID: 0}
   itemInSlot: {fileID: 0}
+--- !u!114 &7177983370662741955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485388715849286144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f8f42e2daf1214783965191858a4cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slotManagerReference: {fileID: 485388715849286149}
+  O2plantTemplate: {fileID: 11400000, guid: 4544f615dd5f4e44288c12ab88b73863, type: 2}
+  O2fanTemplate: {fileID: 11400000, guid: a9fe4ce63f9761a40a3dd206377c94c0, type: 2}
+  oxygenOverTime: 2
 --- !u!1 &1334574469323810151
 GameObject:
   m_ObjectHideFlags: 0
