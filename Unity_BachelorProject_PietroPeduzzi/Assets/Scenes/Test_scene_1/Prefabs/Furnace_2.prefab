@@ -662,7 +662,7 @@ MonoBehaviour:
   ifButtonIsPressedEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 485388715679092714}
         m_TargetAssemblyTypeName: CrafterManager, Assembly-CSharp
         m_MethodName: Craft
         m_Mode: 1

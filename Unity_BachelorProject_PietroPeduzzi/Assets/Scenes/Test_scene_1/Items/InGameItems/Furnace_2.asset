@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b76f683f81c591941ae6b84fc0b37712, type: 3}
   m_Name: Furnace_2
   m_EditorClassIdentifier: 
-  crafterPrefab: {fileID: 485388715679092692, guid: de7ad1c27c8c92f48b0eb9e6e4ad1791, type: 3}
+  crafterPrefab: {fileID: 485388715679092692, guid: 42aa2d14e60a2c7448fa359639ecf9bd, type: 3}
   itemName: Furnace advanced
   itemMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   itemMeshCollider: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
