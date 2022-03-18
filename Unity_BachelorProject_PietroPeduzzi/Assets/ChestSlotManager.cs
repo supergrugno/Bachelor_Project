@@ -5,8 +5,8 @@ using UnityEngine;
 public class ChestSlotManager : MonoBehaviour
 {
     [SerializeField] private SlotManager slotManagerReference;
-    [SerializeField] private ItemTemplate O2plantTemplate;
-    [SerializeField] private ItemTemplate O2fanTemplate;
+    [SerializeField] private string O2plantTemplate;
+    [SerializeField] private string O2fanTemplate;
 
     [SerializeField] private float oxygenPusOverTime = 1.5f;
     [SerializeField] private float oxygenMinusOverTime = 1f;
@@ -15,13 +15,21 @@ public class ChestSlotManager : MonoBehaviour
     {
         if (slotManagerReference.slotIsFull)
         {
-            if (slotManagerReference.slotObjectRigidBody.GetComponent<ItemDisplay>().item.itemName == "Plant in a pot")
+            if (slotManagerReference.slotObjectRigidBody.GetComponent<ItemDisplay>().item.itemName == O2plantTemplate)
             {
-                StaticValues.oxygenInBubble += Time.fixedDeltaTime * oxygenPusOverTime;
+                if (slotManagerReference.slotObjectRigidBody.GetComponent<ItemDisplay>().itemDurabilityRemaining > 0)
+                {
+                    StaticValues.oxygenInBubble += Time.fixedDeltaTime * oxygenPusOverTime;
+                    slotManagerReference.slotObjectRigidBody.GetComponent<ItemDisplay>().itemDurabilityRemaining -= Time.fixedDeltaTime;
+                }
             }
-            else if (slotManagerReference.slotObjectRigidBody.GetComponent<ItemDisplay>().item.itemName == "O2 Fan")
+            else if (slotManagerReference.slotObjectRigidBody.GetComponent<ItemDisplay>().item.itemName == O2fanTemplate)
             {
-                StaticValues.oxygenInBubble -= Time.fixedDeltaTime * oxygenMinusOverTime;
+                if (slotManagerReference.slotObjectRigidBody.GetComponent<ItemDisplay>().itemDurabilityRemaining > 0)
+                {
+                    StaticValues.oxygenInBubble -= Time.fixedDeltaTime * oxygenMinusOverTime;
+                    slotManagerReference.slotObjectRigidBody.GetComponent<ItemDisplay>().itemDurabilityRemaining -= Time.fixedDeltaTime;
+                }
             }
         }
     }

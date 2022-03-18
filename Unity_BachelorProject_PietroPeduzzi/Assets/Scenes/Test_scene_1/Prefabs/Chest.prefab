@@ -129,9 +129,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotManagerReference: {fileID: 485388715635520878}
-  O2plantTemplate: {fileID: 11400000, guid: 4544f615dd5f4e44288c12ab88b73863, type: 2}
-  O2fanTemplate: {fileID: 11400000, guid: a9fe4ce63f9761a40a3dd206377c94c0, type: 2}
-  oxygenOverTime: 2
+  O2plantTemplate: Plant in a pot
+  O2fanTemplate: O2 Fan
+  oxygenPusOverTime: 1.5
+  oxygenMinusOverTime: 1
 --- !u!1 &485388715679092692
 GameObject:
   m_ObjectHideFlags: 0
@@ -246,6 +247,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crafterAsItemTemplate: {fileID: 11400000, guid: e7216776bdac66643a87f0c42272aa78, type: 2}
   loadBarMax: 5
+  O2consuption: 10
   itemBlueprint: {fileID: 670533420319201480, guid: 198aaf1cce2d76b439fa68e0f2d0cea2, type: 3}
   recipes: []
   itemSlots: []
@@ -381,9 +383,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotManagerReference: {fileID: 485388715849286149}
-  O2plantTemplate: {fileID: 11400000, guid: 4544f615dd5f4e44288c12ab88b73863, type: 2}
-  O2fanTemplate: {fileID: 11400000, guid: a9fe4ce63f9761a40a3dd206377c94c0, type: 2}
-  oxygenOverTime: 2
+  O2plantTemplate: Plant in a pot
+  O2fanTemplate: O2 Fan
+  oxygenPusOverTime: 1.5
+  oxygenMinusOverTime: 1
 --- !u!1 &1334574469323810151
 GameObject:
   m_ObjectHideFlags: 0

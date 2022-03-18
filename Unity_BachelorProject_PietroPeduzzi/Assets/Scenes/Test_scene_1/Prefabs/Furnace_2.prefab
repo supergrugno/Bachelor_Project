@@ -230,6 +230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crafterAsItemTemplate: {fileID: 11400000, guid: 662ed99e84a533f43a3f98a3364326bc, type: 2}
   loadBarMax: 5
+  O2consuption: 40
   itemBlueprint: {fileID: 670533420319201480, guid: 198aaf1cce2d76b439fa68e0f2d0cea2, type: 3}
   recipes:
   - {fileID: 11400000, guid: d7288b5b75abc3d47a68b67d48deaf78, type: 2}

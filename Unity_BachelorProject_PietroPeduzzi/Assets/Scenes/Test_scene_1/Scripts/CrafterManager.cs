@@ -15,6 +15,7 @@ public class CrafterManager : MonoBehaviour
     private PlayerMovement playerMovementReference;
 
     public float loadBarMax = 5;
+    public float O2consuption = 10;
     private float loadBarState = 0;
 
     //-----------------------------------------------------------------------------------------------------------------------------
@@ -85,7 +86,7 @@ public class CrafterManager : MonoBehaviour
         {
             bool isEqual = item.itemsNeeded.SequenceEqual(_itemsInSlot);
             //if the elements in the crafter are the same as a recepy the slots gets emptyed and a new item is created
-            if (isEqual)
+            if (isEqual && StaticValues.oxygenInBubble >= O2consuption)
             {
                 Debug.Log("AAAAAAAAAAAAAAAAAAAAAA--------------------------------------------------------------");
                 foreach (var item3 in itemSlots)
@@ -101,6 +102,8 @@ public class CrafterManager : MonoBehaviour
                 //new item is created by reading the recepy and adding the ItemTemplate object to the blueprint prefab
                 GameObject newItem = Instantiate(itemBlueprint, new Vector3(transform.position.x, transform.position.y, 50), Quaternion.identity);
                 newItem.GetComponent<ItemDisplay>().item = recipes[System.Array.IndexOf(recipes, item)].itemResult;
+
+                StaticValues.oxygenInBubble -= O2consuption;
             }
         }
     }

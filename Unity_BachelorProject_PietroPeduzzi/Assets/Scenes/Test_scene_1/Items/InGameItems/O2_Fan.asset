@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crafterPrefab: {fileID: 0}
   itemName: O2 Fan
+  itemDurability: 180
   itemMesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
   itemMeshCollider: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
   itemMaterial: {fileID: 2100000, guid: 1e1ce666cae4a794684cd129aac249d0, type: 2}

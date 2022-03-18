@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crafterPrefab: {fileID: 0}
   itemName: Plant in a pot
+  itemDurability: 180
   itemMesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
   itemMeshCollider: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
   itemMaterial: {fileID: 2100000, guid: ddbacd46d7de44e41bed5c6a6d0fdadb, type: 2}

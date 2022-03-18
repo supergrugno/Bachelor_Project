@@ -9,6 +9,7 @@ public class ItemDisplay : MonoBehaviour
     private MeshFilter thisItemMesh;
     private MeshCollider thisItemCollider;
     private Renderer thisItemMaterial;
+    public float itemDurabilityRemaining;
 
     private void Start()
     {
@@ -20,5 +21,7 @@ public class ItemDisplay : MonoBehaviour
 
         thisItemMaterial = gameObject.GetComponent<Renderer>();
         thisItemMaterial.material = item.itemMaterial;
+
+        itemDurabilityRemaining = item.itemDurability;
     }
 }

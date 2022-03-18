@@ -8,6 +8,7 @@ public class ItemTemplate : ScriptableObject
     public GameObject crafterPrefab;
 
     public string itemName;
+    public float itemDurability;
     public Mesh itemMesh;
     public Mesh itemMeshCollider;
     public Material itemMaterial;
