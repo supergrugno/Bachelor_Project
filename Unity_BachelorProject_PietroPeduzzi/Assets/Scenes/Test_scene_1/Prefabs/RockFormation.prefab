@@ -451,5 +451,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemBlueprint: {fileID: 670533420319201480, guid: 198aaf1cce2d76b439fa68e0f2d0cea2, type: 3}
-  itemProduced: {fileID: 11400000, guid: 0e8ffcb31b682da4bbc8ee18c5d39338, type: 2}
+  itemProduced: {fileID: 11400000, guid: f893de9aefba0ee4f936f2b8fd85b693, type: 2}
   maxMaterials: 2
+  loadBarMax: 5

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b76f683f81c591941ae6b84fc0b37712, type: 3}
+  m_Name: Stone
+  m_EditorClassIdentifier: 
+  crafterPrefab: {fileID: 0}
+  itemName: Stone
+  itemMesh: {fileID: -5495902117074765545, guid: 7b8df67aac3a7954f9ce7d3705c491fd, type: 3}
+  itemMeshCollider: {fileID: -5495902117074765545, guid: 7b8df67aac3a7954f9ce7d3705c491fd, type: 3}
+  itemMaterial: {fileID: -3846018093981099296, guid: 7b8df67aac3a7954f9ce7d3705c491fd, type: 3}
+  itemDescription: A piece of raw stone.

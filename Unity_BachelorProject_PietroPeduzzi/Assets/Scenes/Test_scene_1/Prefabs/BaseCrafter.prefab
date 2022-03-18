@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 485388715679092693}
   - component: {fileID: 485388715679092714}
   m_Layer: 6
-  m_Name: CrafterBluePrint (2)
+  m_Name: BaseCrafter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -228,13 +228,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ad98c9639975e42b1bd4ec7a7f77a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crafterAsItemTemplate: {fileID: 11400000, guid: 957117ad452add141a761ad4ce5e6994, type: 2}
+  crafterAsItemTemplate: {fileID: 11400000, guid: 19869e8ec50603349b4cb6a2082852c2, type: 2}
   loadBarMax: 5
   itemBlueprint: {fileID: 670533420319201480, guid: 198aaf1cce2d76b439fa68e0f2d0cea2, type: 3}
   recipes:
-  - {fileID: 11400000, guid: f890daf867e40574da5ae08489b362e8, type: 2}
-  - {fileID: 11400000, guid: a721bfeae3fb19744a6c7940f4460a19, type: 2}
-  - {fileID: 11400000, guid: 48a1cae2a3599fb438ec4160e517f280, type: 2}
+  - {fileID: 11400000, guid: 8b69ea9a758ae2744af0ad23e4debe22, type: 2}
+  - {fileID: 11400000, guid: f2bd4c8d882333d4ebd8febf274d35cb, type: 2}
+  - {fileID: 11400000, guid: e0c46d996cd953648b14c4f2a4ae52e1, type: 2}
+  - {fileID: 11400000, guid: 4201adbc1d6ed124cb46c469a96a9d9a, type: 2}
+  - {fileID: 11400000, guid: b69a7b9934c67794da1435d0f550397f, type: 2}
+  - {fileID: 11400000, guid: 44dddb5212782cb4a94c06e8f8691918, type: 2}
+  - {fileID: 11400000, guid: 57952a9a03c316d469bfed77a6349326, type: 2}
   itemSlots:
   - {fileID: 485388715849286144}
   - {fileID: 485388715635520873}
@@ -675,4 +679,5 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  ReduceO2reference: {fileID: 0}
   NecessaryPressTime: 2

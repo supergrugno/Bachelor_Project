@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b76f683f81c591941ae6b84fc0b37712, type: 3}
-  m_Name: Wood
+  m_Name: Furnace_1
   m_EditorClassIdentifier: 
-  itemName: Wood
-  itemMesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
-  itemMeshCollider: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
-  itemMaterial: {fileID: 2100000, guid: c2fc96bc76338ed4c92fd20beb6f76d6, type: 2}
-  itemDescription: May be useful as burning material.
+  crafterPrefab: {fileID: 0}
+  itemName: Furnace
+  itemMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  itemMeshCollider: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  itemMaterial: {fileID: 2100000, guid: 5e1e828bd462a254ba9e9a4e2cd160e9, type: 2}
+  itemDescription: A furnace for basic cooking and recepies.

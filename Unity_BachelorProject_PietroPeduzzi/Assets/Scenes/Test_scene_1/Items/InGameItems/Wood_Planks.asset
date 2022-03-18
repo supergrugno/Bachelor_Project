@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b76f683f81c591941ae6b84fc0b37712, type: 3}
+  m_Name: Wood_Planks
+  m_EditorClassIdentifier: 
+  crafterPrefab: {fileID: 0}
+  itemName: Wood planks
+  itemMesh: {fileID: 4300000, guid: 825dc207bf01b7e4bab4a7b500b96d1e, type: 3}
+  itemMeshCollider: {fileID: 4300000, guid: 825dc207bf01b7e4bab4a7b500b96d1e, type: 3}
+  itemMaterial: {fileID: 7741625113677808684, guid: 18f6efa82e8e92a40a763aa7b066f932, type: 3}
+  itemDescription: A refined piece of wood, perfect for crafting.
