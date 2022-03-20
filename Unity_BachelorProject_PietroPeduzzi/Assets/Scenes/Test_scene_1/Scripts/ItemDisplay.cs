@@ -24,4 +24,18 @@ public class ItemDisplay : MonoBehaviour
 
         itemDurabilityRemaining = item.itemDurability;
     }
+
+    public void ResetItem()
+    {
+        thisItemMesh = gameObject.GetComponent<MeshFilter>();
+        thisItemMesh.mesh = item.itemMesh;
+
+        thisItemCollider = gameObject.GetComponent<MeshCollider>();
+        thisItemCollider.sharedMesh = item.itemMeshCollider;
+
+        thisItemMaterial = gameObject.GetComponent<Renderer>();
+        thisItemMaterial.material = item.itemMaterial;
+
+        itemDurabilityRemaining = item.itemDurability;
+    }
 }

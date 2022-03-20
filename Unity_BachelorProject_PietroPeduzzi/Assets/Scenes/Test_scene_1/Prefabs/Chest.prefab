@@ -128,6 +128,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2f8f42e2daf1214783965191858a4cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  O2_plant_broken: {fileID: 11400000, guid: 77838b13dc7188c4aae8b6bbeae6be83, type: 2}
+  O2_fan_broken: {fileID: 11400000, guid: 5794079f2f9fae846b00feeff8cb2f9d, type: 2}
   slotManagerReference: {fileID: 485388715635520878}
   O2plantTemplate: Plant in a pot
   O2fanTemplate: O2 Fan
@@ -382,6 +384,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2f8f42e2daf1214783965191858a4cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  O2_plant_broken: {fileID: 11400000, guid: 77838b13dc7188c4aae8b6bbeae6be83, type: 2}
+  O2_fan_broken: {fileID: 11400000, guid: 5794079f2f9fae846b00feeff8cb2f9d, type: 2}
   slotManagerReference: {fileID: 485388715849286149}
   O2plantTemplate: Plant in a pot
   O2fanTemplate: O2 Fan
