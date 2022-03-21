@@ -7512,6 +7512,67 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 316560743}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &319554183
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 670533420319201462, guid: 198aaf1cce2d76b439fa68e0f2d0cea2, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 670533420319201462, guid: 198aaf1cce2d76b439fa68e0f2d0cea2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 22.45644
+      objectReference: {fileID: 0}
+    - target: {fileID: 670533420319201462, guid: 198aaf1cce2d76b439fa68e0f2d0cea2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 670533420319201462, guid: 198aaf1cce2d76b439fa68e0f2d0cea2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 670533420319201462, guid: 198aaf1cce2d76b439fa68e0f2d0cea2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 670533420319201462, guid: 198aaf1cce2d76b439fa68e0f2d0cea2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 670533420319201462, guid: 198aaf1cce2d76b439fa68e0f2d0cea2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 670533420319201462, guid: 198aaf1cce2d76b439fa68e0f2d0cea2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 670533420319201462, guid: 198aaf1cce2d76b439fa68e0f2d0cea2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 670533420319201462, guid: 198aaf1cce2d76b439fa68e0f2d0cea2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 670533420319201462, guid: 198aaf1cce2d76b439fa68e0f2d0cea2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 670533420319201480, guid: 198aaf1cce2d76b439fa68e0f2d0cea2, type: 3}
+      propertyPath: m_Name
+      value: ItemBluePrint
+      objectReference: {fileID: 0}
+    - target: {fileID: 670533420319201483, guid: 198aaf1cce2d76b439fa68e0f2d0cea2, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: 19869e8ec50603349b4cb6a2082852c2, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 198aaf1cce2d76b439fa68e0f2d0cea2, type: 3}
 --- !u!1 &325344859
 GameObject:
   m_ObjectHideFlags: 0
@@ -10750,8 +10811,9 @@ GameObject:
   - component: {fileID: 693559032}
   - component: {fileID: 693559031}
   - component: {fileID: 693559030}
+  - component: {fileID: 693559034}
   m_Layer: 0
-  m_Name: O2 Bubble_v1
+  m_Name: O2 Bubble_v2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10765,7 +10827,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 693559027}
   m_LocalRotation: {x: 0.4995161, y: -0.50048345, z: 0.49951467, w: 0.5004849}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -3.3, z: 0}
   m_LocalScale: {x: 908.29803, y: 908.29803, z: 908.29803}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10935,6 +10997,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 693559027}
   m_Mesh: {fileID: 4711208715938537054, guid: 1866c96e834a732439af08c2ebc6108b, type: 3}
+--- !u!114 &693559034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693559027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16655f5b79e04ef41ab045d041e0362e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerO2ManagerReference: {fileID: 0}
+  O2_BubbleHead: {fileID: 1332762541}
 --- !u!1 &694470352
 GameObject:
   m_ObjectHideFlags: 0
@@ -19856,7 +19932,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.7783251, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
