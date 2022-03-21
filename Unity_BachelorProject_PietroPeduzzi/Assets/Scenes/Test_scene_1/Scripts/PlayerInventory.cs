@@ -35,6 +35,7 @@ public class PlayerInventory : MonoBehaviour
     {
         CheckDirection();
         GetObject();
+        DeadDrop();
     }
 
     private void CheckDirection()
@@ -220,6 +221,28 @@ public class PlayerInventory : MonoBehaviour
         {
             CurrentObjectRigidBody.position = Hand.position;
             CurrentObjectRigidBody.rotation = Hand.rotation;
+        }
+    }
+
+    private void DeadDrop()
+    {
+        if (StaticValues.playerIsDead)
+        {
+            if (CurrentObjectRigidBody)
+            {
+                CurrentObjectRigidBody.isKinematic = false;
+                CurrentObjectCollider.enabled = true;
+                //LastCurrentObjectRigidBody = CurrentObjectRigidBody;
+
+                CurrentObjectRigidBody.constraints = RigidbodyConstraints.FreezePositionZ;
+
+                //animation
+                animator.SetBool("Has Object", false);
+                hasObjectInHand = false;
+
+                CurrentObjectRigidBody = null;
+                CurrentObjectCollider = null;
+            }
         }
     }
 }

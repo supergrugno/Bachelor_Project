@@ -8,4 +8,8 @@ public class StaticValues : MonoBehaviour
     static public float miningSpeed = 1;
     static public float oxygenInBubble;
     static public float oxygenOnPlayer;
+
+    static public float playerHP;
+    static public float maxPlayerHP;
+    static public bool playerIsDead;
 }

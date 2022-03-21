@@ -20,6 +20,7 @@ public class O2ManagerBubble : MonoBehaviour
     private void Update()
     {
         playerO2ManagerReference.OxygenUsage();
+        playerO2ManagerReference.HPDeploy();
         RefillPlayerO2();
     }
 

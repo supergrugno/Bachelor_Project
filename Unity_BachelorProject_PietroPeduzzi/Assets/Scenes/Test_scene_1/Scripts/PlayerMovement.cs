@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        JumpBehaviour();
+        if(!StaticValues.playerIsDead) JumpBehaviour();
 
         //animations
         animVelocity = rb.velocity.magnitude;
@@ -50,10 +50,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        SideMovement();
+        if (!StaticValues.playerIsDead)
+        {
+            SideMovement();
 
-        if(_canDig) Digging();
-        if (_canPressButton) PressingButton();
+            if (_canDig) Digging();
+            if (_canPressButton) PressingButton();
+        }
     }
 
     private void SideMovement()
