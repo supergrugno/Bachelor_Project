@@ -31,7 +31,7 @@ public class PlayerInventory : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         CheckDirection();
         GetObject();

@@ -19,34 +19,40 @@ public class CrafterPlatformManager : MonoBehaviour
 
     private void Update()
     {
-        if (canPlaceCrafter && platformIsFull == false && Input.GetButtonDown("Interact") && playerInventoryReference.CurrentObjectRigidBody != null) PlaceCrafter();
+        if (canPlaceCrafter && !platformIsFull && Input.GetButtonDown("Interact") && playerInventoryReference.CurrentObjectRigidBody !=null)
+        {
+            if(playerInventoryReference.CurrentObjectRigidBody.gameObject.GetComponent<ItemDisplay>().item.crafterPrefab != null)  PlaceCrafter();
+        }   
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player") canPlaceCrafter = true;
+        if (other.tag == "Player")
+        {
+            canPlaceCrafter = true;
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Player") canPlaceCrafter = false;
+        if (other.tag == "Player")
+        {
+            canPlaceCrafter = false;
+        }
     }
 
-    private void PlaceCrafter()
+    public void PlaceCrafter()
     {
-        if (playerInventoryReference.CurrentObjectRigidBody.gameObject.GetComponent<ItemDisplay>().item.crafterPrefab != null)
-        {
-            Debug.Log("Placed Crafter");
-            GameObject _crafter = Instantiate(playerInventoryReference.CurrentObjectRigidBody.gameObject.GetComponent<ItemDisplay>().item.crafterPrefab, crafterPositionEmptyObj.transform.position, Quaternion.identity);
-            _crafter.transform.parent = crafterPositionEmptyObj.transform;
-            Destroy(playerInventoryReference.CurrentObjectRigidBody.gameObject);
+        Debug.Log("Placed Crafter");
+        GameObject _crafter = Instantiate(playerInventoryReference.CurrentObjectRigidBody.gameObject.GetComponent<ItemDisplay>().item.crafterPrefab, crafterPositionEmptyObj.transform.position, Quaternion.identity);
+        _crafter.transform.parent = crafterPositionEmptyObj.transform;
+        Destroy(playerInventoryReference.CurrentObjectRigidBody.gameObject);
 
-            playerInventoryReference.animator.SetBool("Has Object", false);
-            playerInventoryReference.hasObjectInHand = false;
-            playerInventoryReference.CurrentObjectRigidBody = null;
-            playerInventoryReference.CurrentObjectCollider = null;
+        playerInventoryReference.animator.SetBool("Has Object", false);
+        playerInventoryReference.hasObjectInHand = false;
+        playerInventoryReference.CurrentObjectRigidBody = null;
+        playerInventoryReference.CurrentObjectCollider = null;
 
-            platformIsFull = true;
-        }
+        platformIsFull = true;
     }
 }
