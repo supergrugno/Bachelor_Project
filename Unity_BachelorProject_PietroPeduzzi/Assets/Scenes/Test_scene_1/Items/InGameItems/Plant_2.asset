@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crafterPrefab: {fileID: 0}
   itemName: Refined bio-substance
+  itemDurability: 2
   itemMesh: {fileID: 4300000, guid: 2f5e3d3462b9fba43a427722efd79127, type: 3}
   itemMeshCollider: {fileID: 4300000, guid: 2f5e3d3462b9fba43a427722efd79127, type: 3}
   itemMaterial: {fileID: 2100000, guid: de33e11e853c5c144ad6c63161242de2, type: 2}
   itemDescription: Seems that this substance is consumable but it seems to be possible
     to combine.
+  isEdible: 1

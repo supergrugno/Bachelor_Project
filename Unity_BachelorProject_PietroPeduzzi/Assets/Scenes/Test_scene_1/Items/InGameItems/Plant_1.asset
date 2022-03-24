@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crafterPrefab: {fileID: 0}
   itemName: Carbon based substance
+  itemDurability: 1
   itemMesh: {fileID: 4300000, guid: 2f5e3d3462b9fba43a427722efd79127, type: 3}
   itemMeshCollider: {fileID: 4300000, guid: 2f5e3d3462b9fba43a427722efd79127, type: 3}
   itemMaterial: {fileID: 2100000, guid: c2fc96bc76338ed4c92fd20beb6f76d6, type: 2}
   itemDescription: It seems to be consumable but not very filling.
+  isEdible: 1

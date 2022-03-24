@@ -217,6 +217,28 @@ public class PlayerInventory : MonoBehaviour
             }
         }
 
+        if (Input.GetButtonDown("Consume"))
+        {
+            if (CurrentObjectRigidBody.gameObject.GetComponent<ItemDisplay>().item.isEdible && StaticValues.playerHP < StaticValues.maxPlayerHP)
+            {
+                float hpDifference = StaticValues.maxPlayerHP - StaticValues.playerHP;
+                float itemFoodLevel = CurrentObjectRigidBody.gameObject.GetComponent<ItemDisplay>().item.itemDurability;
+
+                if (hpDifference > itemFoodLevel) StaticValues.playerHP += itemFoodLevel;
+                else if (hpDifference <= itemFoodLevel) StaticValues.playerHP = StaticValues.maxPlayerHP;
+
+                Debug.Log("food eaten");
+
+                //animation
+                animator.SetBool("Has Object", false);
+                hasObjectInHand = false;
+
+                Destroy(CurrentObjectRigidBody.gameObject);
+                CurrentObjectRigidBody = null;
+                CurrentObjectCollider = null;
+            }
+        }
+
         if (CurrentObjectRigidBody)
         {
             CurrentObjectRigidBody.position = Hand.position;
