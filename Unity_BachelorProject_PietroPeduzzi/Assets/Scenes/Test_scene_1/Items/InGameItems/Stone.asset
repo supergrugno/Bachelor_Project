@@ -15,8 +15,8 @@ MonoBehaviour:
   crafterPrefab: {fileID: 0}
   itemName: Stone
   itemDurability: 0
-  itemMesh: {fileID: -5495902117074765545, guid: 7b8df67aac3a7954f9ce7d3705c491fd, type: 3}
+  itemMesh: {fileID: -5495902117074765545, guid: df3997d27d9ff7c41ac83ea6aaa45fc1, type: 3}
   itemMeshCollider: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-  itemMaterial: {fileID: -3846018093981099296, guid: 7b8df67aac3a7954f9ce7d3705c491fd, type: 3}
+  itemMaterial: {fileID: 2100000, guid: f7bedf0024cb44b4eb8b0a1d1b5490ac, type: 2}
   itemDescription: A piece of raw stone.
   isEdible: 0
