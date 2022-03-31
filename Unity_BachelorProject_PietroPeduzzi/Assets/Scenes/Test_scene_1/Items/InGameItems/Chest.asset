@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crafterPrefab: {fileID: 485388715679092692, guid: b99294a40747df74c84853f76d8fb9fb, type: 3}
   itemName: Chest
-  itemMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  itemDurability: 0
+  itemMesh: {fileID: -69760931014144829, guid: 249916ec521546d41bf5edd878cd7ab2, type: 3}
   itemMeshCollider: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-  itemMaterial: {fileID: 7741625113677808684, guid: 18f6efa82e8e92a40a763aa7b066f932, type: 3}
+  itemMaterial: {fileID: 2100000, guid: bc3bdebd58b6a464980ad82998d8768c, type: 2}
   itemDescription: A container to store resources.
+  isEdible: 0

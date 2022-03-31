@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crafterPrefab: {fileID: 0}
   itemName: Ingot
-  itemMesh: {fileID: 4300000, guid: 825dc207bf01b7e4bab4a7b500b96d1e, type: 3}
-  itemMeshCollider: {fileID: 4300000, guid: 825dc207bf01b7e4bab4a7b500b96d1e, type: 3}
-  itemMaterial: {fileID: 2100000, guid: 17f7a86cb8b418d489f76f0047ef3a50, type: 2}
+  itemDurability: 0
+  itemMesh: {fileID: -8447589106756106473, guid: 481afc97a9b577048b6afd847cd5b38b, type: 3}
+  itemMeshCollider: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  itemMaterial: {fileID: 2100000, guid: c91f09e0f63329f4e9c5126a3aa60104, type: 2}
   itemDescription: A refined piece of metal.
+  isEdible: 0
