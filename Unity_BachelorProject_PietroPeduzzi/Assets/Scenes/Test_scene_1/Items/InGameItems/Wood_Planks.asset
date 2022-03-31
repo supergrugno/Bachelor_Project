@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crafterPrefab: {fileID: 0}
   itemName: Wood planks
-  itemMesh: {fileID: 4300000, guid: 825dc207bf01b7e4bab4a7b500b96d1e, type: 3}
-  itemMeshCollider: {fileID: 4300000, guid: 825dc207bf01b7e4bab4a7b500b96d1e, type: 3}
-  itemMaterial: {fileID: 7741625113677808684, guid: 18f6efa82e8e92a40a763aa7b066f932, type: 3}
+  itemDurability: 0
+  itemMesh: {fileID: 8750361782047028729, guid: cfee96abd0a71164f9381734285d48e4, type: 3}
+  itemMeshCollider: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  itemMaterial: {fileID: 2100000, guid: b5f200f9b7a5bb944a5eba8051fe1c97, type: 2}
   itemDescription: A refined piece of wood, perfect for crafting.
+  isEdible: 0

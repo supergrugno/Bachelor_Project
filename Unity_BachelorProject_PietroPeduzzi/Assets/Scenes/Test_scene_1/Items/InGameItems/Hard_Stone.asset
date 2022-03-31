@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crafterPrefab: {fileID: 0}
   itemName: Hard stone
-  itemMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  itemDurability: 0
+  itemMesh: {fileID: -2730192020586043270, guid: 0cd3097ecb41d364485ed3ec7df2030f, type: 3}
   itemMeshCollider: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-  itemMaterial: {fileID: -840037777384891287, guid: 255309bf1dc77d24893636bb268f89e2, type: 3}
+  itemMaterial: {fileID: 2100000, guid: acd7f1809e1e83947aac55ec58a64ab9, type: 2}
   itemDescription: A more resistent stone, optimal to create structures.
+  isEdible: 0
