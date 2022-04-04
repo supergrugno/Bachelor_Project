@@ -19,6 +19,11 @@ public class PlayerItemDescription : MonoBehaviour
     {
         if(playerInventoryReference.hasObjectInHand) itemDescription.text = playerInventoryReference.CurrentObjectRigidBody.gameObject.GetComponent<ItemDisplay>().item.itemDescription;
         ShowItemDescription();
+        if(playerInventoryReference.hasObjectInHand == false)
+        {
+            descriptionCanvas.SetActive(false);
+            descriptionCanvasIsActive = false;
+        }
     }
 
     private void ShowItemDescription()
