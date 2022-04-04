@@ -37,11 +37,24 @@ public class CrafterManager : MonoBehaviour
 
     //private bool recepyIsCorrect = false;
 
+    //visual recipes 
+    private bool recipesIsActive;
+    [SerializeField] private GameObject recipeList;
+    private bool isOnCrafter;
+
     private void Start()
     {
         playerObj = GameObject.FindGameObjectWithTag("Player");
         playerMovementReference = playerObj.GetComponent<PlayerMovement>();
         crafterPlatformManagerReference = gameObject.transform.parent.GetComponentInParent<CrafterPlatformManager>();
+        recipesIsActive = false;
+        isOnCrafter = false;
+        recipeList.SetActive(false);
+    }
+
+    private void Update()
+    {
+        ShowRecipes();
     }
 
     //CRAFTING
@@ -119,12 +132,20 @@ public class CrafterManager : MonoBehaviour
     //------------------------------------------------------------------------------------------------------------------------------------------------
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player") other.GetComponent<PlayerMovement>()._canDig = true;
+        if (other.tag == "Player")
+        {
+            other.GetComponent<PlayerMovement>()._canDig = true;
+            isOnCrafter = true;
+        }  
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Player") other.GetComponent<PlayerMovement>()._canDig = false;
+        if (other.tag == "Player")
+        {
+            other.GetComponent<PlayerMovement>()._canDig = false;
+            isOnCrafter = false;
+        }    
     }
 
     private void OnTriggerStay(Collider other)
@@ -168,5 +189,26 @@ public class CrafterManager : MonoBehaviour
         }
 
         Destroy(gameObject);
+    }
+
+    private void ShowRecipes()
+    {
+        if (isOnCrafter && Input.GetButtonDown("Inspect"))
+        {
+            if (!recipesIsActive)
+            {
+                recipeList.SetActive(true);
+                recipesIsActive = true;
+            }
+            else if (recipesIsActive)
+            {
+                recipeList.SetActive(false);
+                recipesIsActive = false;
+            }
+        }else if (!isOnCrafter)
+        {
+            recipeList.SetActive(false);
+            recipesIsActive = false;
+        }
     }
 }
