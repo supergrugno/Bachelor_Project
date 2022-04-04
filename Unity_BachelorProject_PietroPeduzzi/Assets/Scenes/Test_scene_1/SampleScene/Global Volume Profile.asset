@@ -1,0 +1,126 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4356396592898044529
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 558a8e2b6826cf840aae193990ba9f2e, type: 3}
+  m_Name: ShadowsMidtonesHighlights
+  m_EditorClassIdentifier: 
+  active: 1
+  shadows:
+    m_OverrideState: 1
+    m_Value: {x: 0.91817904, y: 0.9487684, z: 1, w: -0.21122846}
+  midtones:
+    m_OverrideState: 0
+    m_Value: {x: 0.97080386, y: 1, z: 0.99027693, w: 0}
+  highlights:
+    m_OverrideState: 0
+    m_Value: {x: 0.966327, y: 1, z: 0.93265325, w: 0}
+  shadowsStart:
+    m_OverrideState: 0
+    m_Value: 0.06
+  shadowsEnd:
+    m_OverrideState: 0
+    m_Value: 0.3
+  highlightsStart:
+    m_OverrideState: 0
+    m_Value: 0.55
+  highlightsEnd:
+    m_OverrideState: 0
+    m_Value: 1
+--- !u!114 &-4342425631311870721
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 899c54efeace73346a0a16faa3afe726, type: 3}
+  m_Name: Vignette
+  m_EditorClassIdentifier: 
+  active: 1
+  color:
+    m_OverrideState: 1
+    m_Value: {r: 0.18195976, g: 0.702267, b: 0.8207547, a: 1}
+  center:
+    m_OverrideState: 0
+    m_Value: {x: 0.5, y: 0.5}
+  intensity:
+    m_OverrideState: 1
+    m_Value: 0
+  smoothness:
+    m_OverrideState: 1
+    m_Value: 0.5
+  rounded:
+    m_OverrideState: 0
+    m_Value: 0
+--- !u!114 &-2034831828577483840
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c01700fd266d6914ababb731e09af2eb, type: 3}
+  m_Name: DepthOfField
+  m_EditorClassIdentifier: 
+  active: 1
+  mode:
+    m_OverrideState: 1
+    m_Value: 1
+  gaussianStart:
+    m_OverrideState: 1
+    m_Value: 0
+  gaussianEnd:
+    m_OverrideState: 1
+    m_Value: 500
+  gaussianMaxRadius:
+    m_OverrideState: 1
+    m_Value: 1.5
+  highQualitySampling:
+    m_OverrideState: 0
+    m_Value: 0
+  focusDistance:
+    m_OverrideState: 1
+    m_Value: 50
+  aperture:
+    m_OverrideState: 1
+    m_Value: 27.33
+  focalLength:
+    m_OverrideState: 1
+    m_Value: 62.5
+  bladeCount:
+    m_OverrideState: 0
+    m_Value: 5
+  bladeCurvature:
+    m_OverrideState: 0
+    m_Value: 1
+  bladeRotation:
+    m_OverrideState: 0
+    m_Value: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
+  m_Name: Global Volume Profile
+  m_EditorClassIdentifier: 
+  components:
+  - {fileID: -4342425631311870721}
+  - {fileID: -2034831828577483840}
+  - {fileID: -4356396592898044529}
