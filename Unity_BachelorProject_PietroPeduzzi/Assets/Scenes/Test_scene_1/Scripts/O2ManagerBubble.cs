@@ -5,7 +5,7 @@ using UnityEngine;
 public class O2ManagerBubble : MonoBehaviour
 {
     [SerializeField] private float BubbleStartOxygen = 100;
-    [SerializeField] private float maxOxygen = 200;
+    [SerializeField] public float maxOxygen = 200;
 
     [SerializeField] PlayerO2Manager playerO2ManagerReference;
     [SerializeField] GameObject O2_BubbleHead;
