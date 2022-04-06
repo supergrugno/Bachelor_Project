@@ -23437,7 +23437,7 @@ Terrain:
   m_DrawTreesAndFoliage: 1
   m_StaticShadowCaster: 0
   m_ReflectionProbeUsage: 1
-  m_MaterialTemplate: {fileID: 2100000, guid: 9d61dbafd2336fa4eb03d37f2eff62e1, type: 2}
+  m_MaterialTemplate: {fileID: 2100000, guid: b33a8884ed01a064899a4bafe871ed62, type: 2}
   m_BakeLightProbesForTrees: 1
   m_PreserveTreePrototypeLayers: 0
   m_DeringLightProbesForTrees: 1
@@ -30947,7 +30947,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7774566, y: 1}
+    m_SensorSize: {x: 1.7783418, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
