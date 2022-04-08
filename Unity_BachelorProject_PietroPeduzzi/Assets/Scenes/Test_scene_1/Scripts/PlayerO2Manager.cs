@@ -30,9 +30,9 @@ public class PlayerO2Manager : MonoBehaviour
 
     private void Update()
     {
-        if (StaticValues.distanceTraveled >= 100 && StaticValues.distanceTraveled < 200) oxygenDeploySpeed = 2f;
-        if (StaticValues.distanceTraveled >= 200 && StaticValues.distanceTraveled < 300) oxygenDeploySpeed = 4f;
-        if (StaticValues.distanceTraveled >= 300) oxygenDeploySpeed = 6;
+        if (StaticValues.distanceTraveled >= ditance_1 && StaticValues.distanceTraveled < ditance_2) oxygenDeploySpeed = 2f;
+        if (StaticValues.distanceTraveled >= ditance_2 && StaticValues.distanceTraveled < ditance_3) oxygenDeploySpeed = 4f;
+        if (StaticValues.distanceTraveled >= ditance_3) oxygenDeploySpeed = 6;
     }
 
     public void OxygenUsage()
