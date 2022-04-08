@@ -239,8 +239,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e0c46d996cd953648b14c4f2a4ae52e1, type: 2}
   - {fileID: 11400000, guid: 4201adbc1d6ed124cb46c469a96a9d9a, type: 2}
   - {fileID: 11400000, guid: b69a7b9934c67794da1435d0f550397f, type: 2}
-  - {fileID: 11400000, guid: 44dddb5212782cb4a94c06e8f8691918, type: 2}
-  - {fileID: 11400000, guid: 57952a9a03c316d469bfed77a6349326, type: 2}
+  - {fileID: 11400000, guid: 627532f6ba4bb1147ba204074d298bfb, type: 2}
+  - {fileID: 11400000, guid: cd2951b0fc90a3e49bfaa4fdf23408a9, type: 2}
   itemSlots:
   - {fileID: 485388715849286144}
   - {fileID: 485388715635520873}

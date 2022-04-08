@@ -236,6 +236,8 @@ MonoBehaviour:
   recipes:
   - {fileID: 11400000, guid: 870593eb777782d4196555e5420ca7c7, type: 2}
   - {fileID: 11400000, guid: 0b890179fd1d4884098d9f2dda4cc7c8, type: 2}
+  - {fileID: 11400000, guid: 9cabff9eb714d60458f620fdc9ce7a59, type: 2}
+  - {fileID: 11400000, guid: 1b6259539faece74da45ebf4e9276110, type: 2}
   itemSlots:
   - {fileID: 485388715849286144}
   - {fileID: 485388715635520873}

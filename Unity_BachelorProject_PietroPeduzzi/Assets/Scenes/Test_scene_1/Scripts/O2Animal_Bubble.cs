@@ -39,6 +39,6 @@ public class O2Animal_Bubble : MonoBehaviour
         {
             _rend.material.SetFloat("_Dissolve", 1-(StaticValues.oxygenInBubble/10));
         }
-        else if(StaticValues.oxygenInBubble < 10) _rend.material.SetFloat("_Dissolve", 1);
+        else if(StaticValues.oxygenInBubble > 10) _rend.material.SetFloat("_Dissolve", 0);
     }
 }

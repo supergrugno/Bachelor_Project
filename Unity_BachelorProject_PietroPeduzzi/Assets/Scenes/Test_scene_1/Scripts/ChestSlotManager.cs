@@ -32,7 +32,7 @@ public class ChestSlotManager : MonoBehaviour
             }
             else if (slotManagerReference.slotObjectRigidBody.GetComponent<ItemDisplay>().item.itemName == O2fanTemplate)
             {
-                if (slotManagerReference.slotObjectRigidBody.GetComponent<ItemDisplay>().itemDurabilityRemaining > 0)
+                if (slotManagerReference.slotObjectRigidBody.GetComponent<ItemDisplay>().itemDurabilityRemaining > 0 && StaticValues.oxygenInBubble > 0)
                 {
                     StaticValues.oxygenInBubble -= Time.fixedDeltaTime * oxygenMinusOverTime;
                     slotManagerReference.slotObjectRigidBody.GetComponent<ItemDisplay>().itemDurabilityRemaining -= Time.fixedDeltaTime;

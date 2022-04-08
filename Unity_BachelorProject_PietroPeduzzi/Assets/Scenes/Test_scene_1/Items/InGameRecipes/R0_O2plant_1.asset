@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10e1d88fe1a1c3944941e31471d4f60c, type: 3}
-  m_Name: R0_O2fan
+  m_Name: R0_O2plant_1
   m_EditorClassIdentifier: 
-  recepyName: O2 fan
+  recepyName: O2_plant_1
   itemsNeeded:
-  - {fileID: 11400000, guid: 662ed99e84a533f43a3f98a3364326bc, type: 2}
   - {fileID: 11400000, guid: 308ffdaa4a2ecdd488567fd3265f4d4c, type: 2}
-  itemResult: {fileID: 11400000, guid: a9fe4ce63f9761a40a3dd206377c94c0, type: 2}
+  - {fileID: 11400000, guid: bff3de1c9d52c994db81bcd9a50a0fe1, type: 2}
+  itemResult: {fileID: 11400000, guid: 4544f615dd5f4e44288c12ab88b73863, type: 2}

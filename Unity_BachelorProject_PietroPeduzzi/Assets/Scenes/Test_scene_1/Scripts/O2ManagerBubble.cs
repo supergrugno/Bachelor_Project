@@ -43,7 +43,7 @@ public class O2ManagerBubble : MonoBehaviour
         }else if(playerIsInBubble && StaticValues.oxygenOnPlayer < playerO2ManagerReference.playerMaxOxygen && !playerCompletedTutorial)
         {
             StaticValues.oxygenOnPlayer = playerO2ManagerReference.playerMaxOxygen;
-            if (StaticValues.oxygenInBubble == maxOxygen) playerCompletedTutorial = true;
+            if (StaticValues.oxygenInBubble >= maxOxygen) playerCompletedTutorial = true;
         }
     }
 

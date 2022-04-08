@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b76f683f81c591941ae6b84fc0b37712, type: 3}
+  m_Name: O2_Plant_1
+  m_EditorClassIdentifier: 
+  crafterPrefab: {fileID: 0}
+  itemName: Plant in a pot
+  itemDurability: 180
+  itemMesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  itemMeshCollider: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  itemMaterial: {fileID: 2100000, guid: ddbacd46d7de44e41bed5c6a6d0fdadb, type: 2}
+  itemDescription: This plant will produce O2 overtime if placed in a chest.
