@@ -12,4 +12,6 @@ public class StaticValues : MonoBehaviour
     static public float playerHP;
     static public float maxPlayerHP;
     static public bool playerIsDead;
+
+    static public float distanceTraveled = 0;
 }

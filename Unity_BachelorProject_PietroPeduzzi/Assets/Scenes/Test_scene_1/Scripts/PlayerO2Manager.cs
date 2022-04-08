@@ -10,6 +10,10 @@ public class PlayerO2Manager : MonoBehaviour
 
     [SerializeField] private float _maxPlayerHP = 20;
 
+    [SerializeField] private float ditance_1 = 100;
+    [SerializeField] private float ditance_2 = 200;
+    [SerializeField] private float ditance_3 = 200;
+
     //animations
     private Animator animator;
 
@@ -24,9 +28,16 @@ public class PlayerO2Manager : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
     }
 
+    private void Update()
+    {
+        if (StaticValues.distanceTraveled >= 100 && StaticValues.distanceTraveled < 200) oxygenDeploySpeed = 2f;
+        if (StaticValues.distanceTraveled >= 200 && StaticValues.distanceTraveled < 300) oxygenDeploySpeed = 4f;
+        if (StaticValues.distanceTraveled >= 300) oxygenDeploySpeed = 6;
+    }
+
     public void OxygenUsage()
     {
-        if (StaticValues.oxygenOnPlayer > 0) StaticValues.oxygenOnPlayer -= Time.deltaTime / oxygenDeploySpeed;
+        if (StaticValues.oxygenOnPlayer > 0) StaticValues.oxygenOnPlayer -= Time.deltaTime * oxygenDeploySpeed;
         else if (StaticValues.oxygenOnPlayer <= 0) StaticValues.oxygenOnPlayer = 0;
     }
 
