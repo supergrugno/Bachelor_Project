@@ -27,6 +27,10 @@ public class PlayerMovement : MonoBehaviour
     public bool _canPressButton = false;
     public bool _isPressingButton = false;
 
+    [SerializeField] private ParticleSystem dustPS_1;
+    [SerializeField] private ParticleSystem dustPS_2;
+    private bool isRunning = false;
+
     private void Start()
     {
         rb = this.gameObject.GetComponent<Rigidbody>();
@@ -37,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
         //animations
         animator = GetComponentInChildren<Animator>();
         velocityHash = Animator.StringToHash("Velocity");
+        StaticValues.isLookingRight = true;
     }
 
     void Update()
@@ -46,6 +51,32 @@ public class PlayerMovement : MonoBehaviour
         //animations
         animVelocity = rb.velocity.magnitude;
         animator.SetFloat(velocityHash, animVelocity);
+
+        //player look direction + dust
+        if (Input.GetAxisRaw("Horizontal") != 0)
+        {
+            if (isGrounded()) CreateDust(1);
+            if (Input.GetAxisRaw("Horizontal") < 0 && StaticValues.isLookingRight)
+            {
+                gameObject.transform.localScale = new Vector3(-1, 1, 1);
+                //if(isGrounded()) CreateDust(1);
+                StaticValues.isLookingRight = false;
+            }
+            else if (Input.GetAxisRaw("Horizontal") > 0 && !StaticValues.isLookingRight)
+            {
+                gameObject.transform.localScale = new Vector3(1, 1, 1);
+                //if (isGrounded()) CreateDust(1);
+                StaticValues.isLookingRight = true;
+            }
+            if(!isRunning && isGrounded())
+            {
+                //CreateDust(1);
+                isRunning = true;
+            }
+        }else if (Input.GetAxisRaw("Horizontal") == 0 && isRunning)
+        {
+            isRunning = false;
+        }
     }
 
     private void FixedUpdate()
@@ -66,21 +97,6 @@ public class PlayerMovement : MonoBehaviour
         //move player
         Vector3 MoveVector = transform.TransformDirection(PlayerMovementInput) * moveSpeed * Time.deltaTime;
         rb.velocity = new Vector3(MoveVector.x, rb.velocity.y, MoveVector.z);
-
-        //player look direction
-        if(Input.GetAxisRaw("Horizontal") != 0)
-        {
-            if (Input.GetAxisRaw("Horizontal") < 0)
-            {
-                StaticValues.isLookingRight = false;
-                gameObject.transform.localScale = new Vector3(-1, 1, 1);
-            }
-            else if(Input.GetAxisRaw("Horizontal") > 0)
-            {
-                StaticValues.isLookingRight = true;
-                gameObject.transform.localScale = new Vector3(1, 1, 1);
-            }
-        }
     }
 
     private void Digging()
@@ -126,6 +142,7 @@ public class PlayerMovement : MonoBehaviour
 
             //animation
             animator.SetBool("IsJumping", true);
+            CreateDust(2);
         }
     }
 
@@ -133,5 +150,11 @@ public class PlayerMovement : MonoBehaviour
     {
         bool isGrounded = Physics.Raycast(transform.position, -gameObject.transform.up, playerCollider.bounds.extents.y + 0.5f, groundLayers);
         return isGrounded;
+    }
+
+    private void CreateDust(int PSnumber)
+    {
+        if (PSnumber == 1) dustPS_1.Play();
+        if (PSnumber == 2) dustPS_2.Play();
     }
 }

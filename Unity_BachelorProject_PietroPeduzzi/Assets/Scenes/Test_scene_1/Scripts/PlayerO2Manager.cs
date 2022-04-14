@@ -16,6 +16,7 @@ public class PlayerO2Manager : MonoBehaviour
 
     //animations
     private Animator animator;
+    
 
     private void Start()
     {
