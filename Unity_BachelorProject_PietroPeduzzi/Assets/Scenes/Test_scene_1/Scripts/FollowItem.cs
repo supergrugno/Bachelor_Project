@@ -6,7 +6,6 @@ public class FollowItem : MonoBehaviour
 {
     [SerializeField] private GameObject _canvas;
     private GameObject itemToFollow;
-    private bool itemArrived = false;
 
     private void Start()
     {
@@ -14,9 +13,8 @@ public class FollowItem : MonoBehaviour
     }
     private void Update()
     {
-        if(itemArrived) transform.position = itemToFollow.transform.position;
-
-        if (itemArrived && itemToFollow.GetComponent<Rigidbody>().isKinematic == true) Destroy(gameObject);
+        gameObject.transform.position = itemToFollow.transform.position;
+        _canvas.SetActive(true);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -24,7 +22,6 @@ public class FollowItem : MonoBehaviour
         if(other.tag == "PickUpObject")
         {
             itemToFollow = other.gameObject;
-            itemArrived = true;
             _canvas.SetActive(true);
         }
     }

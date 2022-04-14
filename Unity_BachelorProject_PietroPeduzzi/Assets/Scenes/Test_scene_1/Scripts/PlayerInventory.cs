@@ -25,6 +25,9 @@ public class PlayerInventory : MonoBehaviour
     public Animator animator;
     public bool hasObjectInHand;
 
+    //other
+    //[SerializeField] private LayerMask checkXLayer;
+    private GameObject lastObjCheckX;
 
     private void Start()
     {
