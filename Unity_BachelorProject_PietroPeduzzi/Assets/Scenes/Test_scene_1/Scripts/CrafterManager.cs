@@ -42,6 +42,10 @@ public class CrafterManager : MonoBehaviour
     [SerializeField] private GameObject recipeList;
     private bool isOnCrafter;
 
+    //others
+    [SerializeField] private Transform psLocation;
+    [SerializeField] private GameObject cloudDustPS;
+
     private void Start()
     {
         playerObj = GameObject.FindGameObjectWithTag("Player");
@@ -82,13 +86,13 @@ public class CrafterManager : MonoBehaviour
         if (fullSlotsCounter == itemSlots.Length)
         {
             //if all crafter slots are full the crafter checks the recepies
-            Debug.Log("Crafter is full");
+            //Debug.Log("Crafter is full");
             CheckRecepy();
         }
         else
         {
             //if the crafter is not full nothing happens
-            Debug.Log("Crafter need to be filled");
+            //Debug.Log("Crafter need to be filled");
         }
     }
     
@@ -101,7 +105,7 @@ public class CrafterManager : MonoBehaviour
             //if the elements in the crafter are the same as a recepy the slots gets emptyed and a new item is created
             if (isEqual && StaticValues.oxygenInBubble >= O2consuption)
             {
-                Debug.Log("AAAAAAAAAAAAAAAAAAAAAA--------------------------------------------------------------");
+                //Debug.Log("AAAAAAAAAAAAAAAAAAAAAA--------------------------------------------------------------");
                 foreach (var item3 in itemSlots)
                 {
                     SlotManager slotRB = item3.GetComponent<SlotManager>();
@@ -170,7 +174,8 @@ public class CrafterManager : MonoBehaviour
 
     private void DropCrafter()
     {
-        Debug.Log("Crafter has been dropped");
+        //Debug.Log("Crafter has been dropped");
+        CreateCloud();
 
         GameObject newItem = Instantiate(itemBlueprint, new Vector3(transform.position.x, transform.position.y + 0.5f, 50), Quaternion.identity);
         newItem.GetComponent<ItemDisplay>().item = crafterAsItemTemplate;
@@ -187,7 +192,6 @@ public class CrafterManager : MonoBehaviour
                 Destroy(item.GetComponent<SlotManager>().slotObjectRigidBody.gameObject);
             }
         }
-
         Destroy(gameObject);
     }
 
@@ -210,5 +214,10 @@ public class CrafterManager : MonoBehaviour
             recipeList.SetActive(false);
             recipesIsActive = false;
         }
+    }
+
+    private void CreateCloud()
+    {
+        Instantiate(cloudDustPS, psLocation.position, Quaternion.identity);
     }
 }

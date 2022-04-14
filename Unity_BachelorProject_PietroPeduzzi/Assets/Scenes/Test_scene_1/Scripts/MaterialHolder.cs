@@ -16,6 +16,8 @@ public class MaterialHolder : MonoBehaviour
     public float loadBarMax = 5;
     private float loadBarState = 0;
 
+    [SerializeField] private ParticleSystem cloudPS;
+
     private void Start()
     {
         playerObj = GameObject.FindGameObjectWithTag("Player");
@@ -58,5 +60,12 @@ public class MaterialHolder : MonoBehaviour
         GameObject newItem = Instantiate(itemBlueprint, new Vector3(transform.position.x, transform.position.y + 0.5f, 50), Quaternion.identity);
         newItem.GetComponent<ItemDisplay>().item = itemProduced;
         newItem.GetComponent<Rigidbody>().AddForce((gameObject.transform.right + gameObject.transform.up), ForceMode.Impulse);
+
+        CreateCloud();
+    }
+
+    private void CreateCloud()
+    {
+        cloudPS.Play();
     }
 }

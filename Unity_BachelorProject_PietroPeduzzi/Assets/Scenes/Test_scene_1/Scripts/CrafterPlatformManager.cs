@@ -10,6 +10,8 @@ public class CrafterPlatformManager : MonoBehaviour
     private GameObject playerReference;
     private PlayerInventory playerInventoryReference;
 
+    [SerializeField] private ParticleSystem cloudPS;
+
 
     private void Start()
     {
@@ -43,7 +45,7 @@ public class CrafterPlatformManager : MonoBehaviour
 
     public void PlaceCrafter()
     {
-        Debug.Log("Placed Crafter");
+        //Debug.Log("Placed Crafter");
         GameObject _crafter = Instantiate(playerInventoryReference.CurrentObjectRigidBody.gameObject.GetComponent<ItemDisplay>().item.crafterPrefab, crafterPositionEmptyObj.transform.position, Quaternion.identity);
         _crafter.transform.parent = crafterPositionEmptyObj.transform;
         Destroy(playerInventoryReference.CurrentObjectRigidBody.gameObject);
@@ -54,5 +56,11 @@ public class CrafterPlatformManager : MonoBehaviour
         playerInventoryReference.CurrentObjectCollider = null;
 
         platformIsFull = true;
+        CreateCloud();
+    }
+
+    private void CreateCloud()
+    {
+        cloudPS.Play();
     }
 }

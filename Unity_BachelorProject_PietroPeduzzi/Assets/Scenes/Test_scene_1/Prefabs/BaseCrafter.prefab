@@ -151,6 +151,7 @@ Transform:
   - {fileID: 485388715635520874}
   - {fileID: 3692629626887791899}
   - {fileID: 4838874353996041348}
+  - {fileID: 5737108660766379837}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -248,6 +249,8 @@ MonoBehaviour:
   _itemsInSlot: []
   _itemsInSlotVoid: []
   recipeList: {fileID: 2492524528060212344}
+  psLocation: {fileID: 5737108660766379837}
+  cloudDustPS: {fileID: 540900140609514119, guid: b0b5ea1a5224b81408565c038e6e6234, type: 3}
 --- !u!1 &485388715849286144
 GameObject:
   m_ObjectHideFlags: 0
@@ -439,6 +442,37 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &931593930941275348
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5737108660766379837}
+  m_Layer: 0
+  m_Name: PS location
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5737108660766379837
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 931593930941275348}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.5, z: -1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 485388715679092712}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1334574469323810151
 GameObject:
   m_ObjectHideFlags: 0
