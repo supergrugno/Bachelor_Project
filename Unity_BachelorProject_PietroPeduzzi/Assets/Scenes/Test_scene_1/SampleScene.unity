@@ -54388,7 +54388,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7826087, y: 1}
+    m_SensorSize: {x: 1.7775666, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -58965,6 +58965,9 @@ MonoBehaviour:
   animalSpeed_0: 0.3
   animalSpeed_1: 0.6
   animalSpeed_2: 0.9
+  distance_0: 250
+  distance_1: 350
+  distance_2: 500
   o2ManagerBubbleReference: {fileID: 4502941979487838819}
 --- !u!65 &919132148707452298
 BoxCollider:
