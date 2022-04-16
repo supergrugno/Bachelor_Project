@@ -252,7 +252,7 @@ MonoBehaviour:
   itemProduced: {fileID: 11400000, guid: 902ef5ce3d63e8d408cdecf906905ef8, type: 2}
   maxMaterials: 3
   loadBarMax: 5
-  cloudPS: {fileID: 0}
+  cloudPS: {fileID: 9082195438258653643}
 --- !u!1 &3850764473857469961
 GameObject:
   m_ObjectHideFlags: 0
@@ -802,5 +802,10 @@ PrefabInstance:
 --- !u!4 &5597708140592531605 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 337443419756141736, guid: f3f0824cb5aef81468794aed18e375d0, type: 3}
+  m_PrefabInstance: {fileID: 5260726520083584061}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &9082195438258653643 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3966451107678100982, guid: f3f0824cb5aef81468794aed18e375d0, type: 3}
   m_PrefabInstance: {fileID: 5260726520083584061}
   m_PrefabAsset: {fileID: 0}
