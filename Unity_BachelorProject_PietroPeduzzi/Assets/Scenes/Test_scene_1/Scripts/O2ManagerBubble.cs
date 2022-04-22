@@ -10,6 +10,7 @@ public class O2ManagerBubble : MonoBehaviour
     [SerializeField] PlayerO2Manager playerO2ManagerReference;
     [SerializeField] GameObject O2_BubbleHead;
     private bool playerIsInBubble = false;
+    [SerializeField] GameObject vignetteCanvas;
 
     public bool playerCompletedTutorial = false;
 
@@ -53,6 +54,7 @@ public class O2ManagerBubble : MonoBehaviour
         {
             playerIsInBubble = true;
             O2_BubbleHead.GetComponent<Animator>().SetTrigger("Deactivate");
+            vignetteCanvas.SetActive(false);
         }
     }
 
@@ -62,6 +64,7 @@ public class O2ManagerBubble : MonoBehaviour
         {
             playerIsInBubble = false;
             O2_BubbleHead.GetComponent<Animator>().SetTrigger("Activate");
+            vignetteCanvas.SetActive(true);
         }
     }
 }

@@ -7,10 +7,12 @@ public class StartBubble : MonoBehaviour
     [SerializeField] PlayerO2Manager playerO2ManagerReference;
     [SerializeField] GameObject O2_BubbleHead;
     private bool playerIsInBubble = false;
+    [SerializeField] GameObject vignetteCanvas;
 
     private void Start()
     {
         playerO2ManagerReference = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerO2Manager>();
+        vignetteCanvas.SetActive(false);
     }
 
     private void Update()
@@ -27,6 +29,7 @@ public class StartBubble : MonoBehaviour
         {
             playerIsInBubble = true;
             O2_BubbleHead.GetComponent<Animator>().SetTrigger("Deactivate");
+            vignetteCanvas.SetActive(false);
         }
     }
 
@@ -36,6 +39,7 @@ public class StartBubble : MonoBehaviour
         {
             playerIsInBubble = false;
             O2_BubbleHead.GetComponent<Animator>().SetTrigger("Activate");
+            vignetteCanvas.SetActive(true);
         }
     }
 }
