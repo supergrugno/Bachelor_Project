@@ -22,9 +22,10 @@ public class O2ManagerBubble : MonoBehaviour
 
     private void Update()
     {
-            playerO2ManagerReference.OxygenUsage();
-            playerO2ManagerReference.HPDeploy();
-            RefillPlayerO2();
+        playerO2ManagerReference.OxygenUsage();
+        playerO2ManagerReference.HPDeploy();
+        RefillPlayerO2();
+        BubbleMaxO2Cap();
     }
 
     private void RefillPlayerO2()
@@ -66,5 +67,10 @@ public class O2ManagerBubble : MonoBehaviour
             O2_BubbleHead.GetComponent<Animator>().SetTrigger("Activate");
             vignetteCanvas.SetActive(true);
         }
+    }
+
+    private void BubbleMaxO2Cap()
+    {
+        if (StaticValues.oxygenInBubble >= maxOxygen) StaticValues.oxygenInBubble = maxOxygen;
     }
 }
