@@ -121,6 +121,8 @@ public class CrafterManager : MonoBehaviour
                 newItem.GetComponent<ItemDisplay>().item = recipes[System.Array.IndexOf(recipes, item)].itemResult;
 
                 StaticValues.oxygenInBubble -= O2consuption;
+                CreateCloud();
+
             }
         }
     }
