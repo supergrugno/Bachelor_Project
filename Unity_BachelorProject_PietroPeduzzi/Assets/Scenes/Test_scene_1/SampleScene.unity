@@ -56686,7 +56686,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7767653, y: 1}
+    m_SensorSize: {x: 1.7818182, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -70142,7 +70142,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8997365970159013441}
   m_LocalRotation: {x: -0.74111027, y: -0.06597361, z: 0.013533858, w: 0.66799694}
-  m_LocalPosition: {x: -0, y: 38.288944, z: -29.284828}
+  m_LocalPosition: {x: 0, y: 38.288944, z: -29.28483}
   m_LocalScale: {x: 83.73715, y: 96.016785, z: 83.737144}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -71320,6 +71320,7 @@ GameObject:
   - component: {fileID: 7983793000613137708}
   - component: {fileID: 8963521149010189487}
   - component: {fileID: 459008354744836130}
+  - component: {fileID: 8997365970159013442}
   m_Layer: 0
   m_Name: Eyes
   m_TagString: Untagged
@@ -71327,6 +71328,26 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &8997365970159013442
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8997365970159013441}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2e8b3c7be1ee66e4d8299e228a9b39e2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &9002643427555423163
 Transform:
   m_ObjectHideFlags: 0
