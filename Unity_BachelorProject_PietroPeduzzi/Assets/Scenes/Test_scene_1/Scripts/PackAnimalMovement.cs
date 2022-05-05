@@ -17,6 +17,8 @@ public class PackAnimalMovement : MonoBehaviour
 
     private float startXPosition;
 
+    public bool animalCanMove = true;
+
     private void Start()
     {
         startXPosition = gameObject.transform.position.x;
@@ -24,7 +26,10 @@ public class PackAnimalMovement : MonoBehaviour
 
     private void Update()
     {
-        transform.position += Vector3.right * Time.deltaTime * actualAnimalSpeed;
+        if (animalCanMove)
+        {
+            transform.position += Vector3.right * Time.deltaTime * actualAnimalSpeed;
+        }
         if (o2ManagerBubbleReference.playerCompletedTutorial)
         {
             if (StaticValues.distanceTraveled < distance_0) actualAnimalSpeed = animalSpeed_0;
