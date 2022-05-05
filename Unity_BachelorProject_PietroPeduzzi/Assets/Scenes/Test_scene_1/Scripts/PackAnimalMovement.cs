@@ -32,9 +32,11 @@ public class PackAnimalMovement : MonoBehaviour
         }
         if (o2ManagerBubbleReference.playerCompletedTutorial)
         {
-            if (StaticValues.distanceTraveled < distance_0) actualAnimalSpeed = animalSpeed_0;
+            actualAnimalSpeed = animalSpeed_0;
+
+            /*if (StaticValues.distanceTraveled < distance_0) actualAnimalSpeed = animalSpeed_0;
             if (StaticValues.distanceTraveled >= distance_0 && StaticValues.distanceTraveled < distance_2) actualAnimalSpeed = animalSpeed_1;
-            if (StaticValues.distanceTraveled >= distance_2 && StaticValues.distanceTraveled < 350) actualAnimalSpeed = animalSpeed_2;
+            if (StaticValues.distanceTraveled >= distance_2 && StaticValues.distanceTraveled < 350) actualAnimalSpeed = animalSpeed_2;*/
         }
 
         StaticValues.distanceTraveled = gameObject.transform.position.x - startXPosition;
