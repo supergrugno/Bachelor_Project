@@ -52,6 +52,8 @@ Material:
     - _Blend: 0
     - _CastShadows: 0
     - _Cull: 2
+    - _DistortAmplitude: 1
+    - _DistortNoiseScale: 200
     - _DstBlend: 0
     - _NoiseDetails: 1.74
     - _PolygonSides: 1.64
@@ -59,7 +61,8 @@ Material:
     - _QueueOffset: 0
     - _ReceiveShadows: 0
     - _SineAmplitude: 0.38
-    - _SineFrequency: 3
+    - _SineAmplitude_1: 1
+    - _SineFrequency: 200
     - _SineRotation: 8.39
     - _SizeReducer: 0.01
     - _SrcBlend: 1

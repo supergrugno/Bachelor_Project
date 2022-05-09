@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crafterPrefab: {fileID: 485388715679092692, guid: 42aa2d14e60a2c7448fa359639ecf9bd, type: 3}
   itemName: Furnace advanced
-  itemMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-  itemMeshCollider: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-  itemMaterial: {fileID: 2100000, guid: 17f7a86cb8b418d489f76f0047ef3a50, type: 2}
+  itemDurability: 0
+  itemMesh: {fileID: 3926380919799947217, guid: d9e7d43931f65e94aa8898ae62d576bd, type: 3}
+  itemMeshCollider: {fileID: 3926380919799947217, guid: d9e7d43931f65e94aa8898ae62d576bd, type: 3}
+  itemMaterial: {fileID: 2100000, guid: 265984ac3c071d24c99b8acf803b5c30, type: 2}
   itemDescription: A more powerful furnace that can extract biologic materials.
+  isEdible: 0

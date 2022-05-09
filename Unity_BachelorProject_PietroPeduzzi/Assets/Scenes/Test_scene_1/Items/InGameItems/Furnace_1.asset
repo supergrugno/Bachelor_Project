@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crafterPrefab: {fileID: 485388715679092692, guid: f01c57b507b250c4ba34d6ff4e5057e7, type: 3}
   itemName: Furnace
-  itemMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  itemDurability: 0
+  itemMesh: {fileID: -3329372162341699171, guid: f2eb4f9dc56f53e4bb663ea721c435ec, type: 3}
   itemMeshCollider: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-  itemMaterial: {fileID: 2100000, guid: 5e1e828bd462a254ba9e9a4e2cd160e9, type: 2}
+  itemMaterial: {fileID: 2100000, guid: fa748b86bf813944bb0a345e6078e24c, type: 2}
   itemDescription: A furnace for basic cooking and recepies.
+  isEdible: 0
