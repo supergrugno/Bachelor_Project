@@ -106,21 +106,28 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
+    - _GrainColorBlend: 0.3
+    - _GrainPeriod: 7000
     - _Metallic: 0
     - _NoiseDetails: 1.74
+    - _NormalStrenght: 22.4
     - _OcclusionStrength: 1
     - _Parallax: 0.005
-    - _PolygonSides: 20
+    - _PolygonSides: 5
+    - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _SineAmplitude: 0
     - _SineAmplitude_1: 1
-    - _SineFrequency: 200
+    - _SineFrequency: 1
     - _SineRotation: 13.68
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
+    - _SubstrateDuneHeightMax: 0.827
+    - _SubstrateGrainHeightMax: 0
+    - _SubstrateTightening: 1
     - _Surface: 0
     - _UV_scale: 1
     - _VoronoiAmplitude: 2
@@ -131,8 +138,9 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _SandHigh: {r: 0.8018868, g: 0.77149975, b: 0.54089534, a: 0}
-    - _SandLow: {r: 0.764151, g: 0.62577254, b: 0.34242615, a: 0}
+    - _SandHigh: {r: 0.7075472, g: 0.68878645, b: 0.5306604, a: 0}
+    - _SandLow: {r: 0.5283019, g: 0.4266323, b: 0.26165894, a: 0}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    - _SubstrateColor: {r: 0.5754717, g: 0.499975, b: 0.33388218, a: 0}
     - _UV_tiling: {r: 2, g: 2, b: 0, a: 0}
   m_BuildTextureStacks: []
