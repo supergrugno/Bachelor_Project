@@ -15,9 +15,9 @@ MonoBehaviour:
   crafterPrefab: {fileID: 0}
   itemName: A plant
   itemDurability: 3
-  itemMesh: {fileID: 4300000, guid: 2f5e3d3462b9fba43a427722efd79127, type: 3}
-  itemMeshCollider: {fileID: 4300000, guid: 2f5e3d3462b9fba43a427722efd79127, type: 3}
-  itemMaterial: {fileID: 2100000, guid: f8c0e0c3a65185642b489a5561640eb5, type: 2}
+  itemMesh: {fileID: 8247008268046285122, guid: a501076d249184543ae84966bab079a1, type: 3}
+  itemMeshCollider: {fileID: 8247008268046285122, guid: a501076d249184543ae84966bab079a1, type: 3}
+  itemMaterial: {fileID: 2100000, guid: 3a438f57c5297d04493223741bf9f9a5, type: 2}
   itemDescription: Can be consumed, may help with the oxygen problem with some more
     testing.
   isEdible: 1
