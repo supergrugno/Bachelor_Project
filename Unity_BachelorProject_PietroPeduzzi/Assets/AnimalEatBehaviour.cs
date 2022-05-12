@@ -31,6 +31,11 @@ public class AnimalEatBehaviour : MonoBehaviour
         {
             FeedAnimal();
         }
+
+        if (eatingInProgress)
+        {
+            StaticValues.oxygenInBubble += Time.fixedDeltaTime;
+        }
     }
 
     private void FeedAnimal()
