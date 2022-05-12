@@ -15,8 +15,8 @@ MonoBehaviour:
   crafterPrefab: {fileID: 0}
   itemName: Plant in a pot
   itemDurability: 270
-  itemMesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
-  itemMeshCollider: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
-  itemMaterial: {fileID: 2100000, guid: ddbacd46d7de44e41bed5c6a6d0fdadb, type: 2}
+  itemMesh: {fileID: 8378469530796314886, guid: 0a1da680e5ba2c6499e28321d21e9f60, type: 3}
+  itemMeshCollider: {fileID: -4817748934980871234, guid: 38eedda5deaade549910a0d8fe24673a, type: 3}
+  itemMaterial: {fileID: 2100000, guid: 69a07cfd96a81ba499979672e6201cb1, type: 2}
   itemDescription: This plant will produce O2 overtime if placed in a chest.
   isEdible: 0
