@@ -14,9 +14,14 @@ public class CrafterButton : MonoBehaviour
     private bool buttonHasBeenPressed = false;
     private GameObject player;
 
+    //animation
+    private Animator animatorRef;
+
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        animatorRef = this.gameObject.GetComponent<Animator>();
+        animatorRef.enabled = false;
     }
 
     private void Update()
@@ -29,11 +34,14 @@ public class CrafterButton : MonoBehaviour
                 ifButtonIsPressedEvent.Invoke();
                 buttonHasBeenPressed = true;
             }
+
+            animatorRef.SetBool("IsBeingPressed", true);
         }
         else if (!player.GetComponent<PlayerMovement>()._isPressingButton)
         {
             actualTimePressed = 0;
             buttonHasBeenPressed = false;
+            animatorRef.SetBool("IsBeingPressed", false);
         }
     }
 
@@ -43,6 +51,7 @@ public class CrafterButton : MonoBehaviour
         {
             other.GetComponent<PlayerMovement>()._canPressButton = true;
             playerIsOnThisButton = true;
+            animatorRef.enabled = true;
         } 
     }
 
@@ -52,6 +61,7 @@ public class CrafterButton : MonoBehaviour
         {
             other.GetComponent<PlayerMovement>()._canPressButton = false;
             playerIsOnThisButton = false;
+            animatorRef.enabled = false;
         }
     }
 
