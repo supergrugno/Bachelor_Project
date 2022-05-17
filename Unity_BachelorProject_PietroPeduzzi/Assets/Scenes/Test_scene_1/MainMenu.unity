@@ -948,7 +948,7 @@ MonoBehaviour:
   mainCamera: {fileID: 842982715}
   cameraPosition1: {fileID: 858192711}
   cameraPosition2: {fileID: 2114983521}
-  gameSceneName: SampleScene
+  gameSceneName: GameScene
   playButton: {fileID: 1639580954}
   backButton: {fileID: 1332280154}
   creditsButton: {fileID: 252761163}
