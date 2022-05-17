@@ -19,4 +19,5 @@ MonoBehaviour:
   itemMeshCollider: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   itemMaterial: {fileID: 2100000, guid: fa748b86bf813944bb0a345e6078e24c, type: 2}
   itemDescription: A furnace for basic cooking and recepies.
+  itemIcon: {fileID: 21300000, guid: c1116faa53c3bfa46bd788b0aade7e6b, type: 3}
   isEdible: 0

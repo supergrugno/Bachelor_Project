@@ -19,4 +19,5 @@ MonoBehaviour:
   itemMeshCollider: {fileID: -4817748934980871234, guid: 38eedda5deaade549910a0d8fe24673a, type: 3}
   itemMaterial: {fileID: 2100000, guid: 705cbaf3f70af214e8f456a5a4a849b0, type: 2}
   itemDescription: This plant will produce O2 overtime if placed in a chest.
+  itemIcon: {fileID: 21300000, guid: a92812572f3fb0c47b1b2bdb58ad980b, type: 3}
   isEdible: 0

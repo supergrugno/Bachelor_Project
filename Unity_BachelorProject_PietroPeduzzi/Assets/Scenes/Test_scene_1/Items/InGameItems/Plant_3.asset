@@ -20,4 +20,5 @@ MonoBehaviour:
   itemMaterial: {fileID: 2100000, guid: 3a438f57c5297d04493223741bf9f9a5, type: 2}
   itemDescription: Can be consumed, may help with the oxygen problem with some more
     testing.
+  itemIcon: {fileID: 21300000, guid: 8addfaca8314052469f61d079a3c0c23, type: 3}
   isEdible: 1

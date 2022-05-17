@@ -14,6 +14,7 @@ public class ItemTemplate : ScriptableObject
     public Material itemMaterial;
 
     public string itemDescription;
+    public Sprite itemIcon;
 
     public bool isEdible;
 }

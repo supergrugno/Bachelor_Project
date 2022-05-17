@@ -20,4 +20,5 @@ MonoBehaviour:
   itemMaterial: {fileID: 2100000, guid: 398208505f419dc408a28043c86c54ae, type: 2}
   itemDescription: Seems that this substance is consumable but it seems to be possible
     to combine.
+  itemIcon: {fileID: 21300000, guid: f2d544b14903fb049886e28ed9904fc9, type: 3}
   isEdible: 1

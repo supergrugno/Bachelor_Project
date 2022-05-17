@@ -14,8 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crafterPrefab: {fileID: 485388715679092692, guid: d9257806851f4444e8f42a6ad064b406, type: 3}
   itemName: Base Crafter
+  itemDurability: 0
   itemMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   itemMeshCollider: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   itemMaterial: {fileID: 2100000, guid: 5bbec098120535748a937d8dd264e3cc, type: 2}
   itemDescription: This object if placed at the right place will let you combine
     materials.
+  itemIcon: {fileID: 21300000, guid: cb2da6aa7bb0cd245a597cd9e2bbd5e1, type: 3}
+  isEdible: 0

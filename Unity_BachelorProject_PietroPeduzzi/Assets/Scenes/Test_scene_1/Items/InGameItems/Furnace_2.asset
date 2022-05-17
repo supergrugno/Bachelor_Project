@@ -19,4 +19,5 @@ MonoBehaviour:
   itemMeshCollider: {fileID: 3926380919799947217, guid: d9e7d43931f65e94aa8898ae62d576bd, type: 3}
   itemMaterial: {fileID: 2100000, guid: 265984ac3c071d24c99b8acf803b5c30, type: 2}
   itemDescription: A more powerful furnace that can extract biologic materials.
+  itemIcon: {fileID: 21300000, guid: 7fc6edf0edd646c48af286e721a4a7d3, type: 3}
   isEdible: 0

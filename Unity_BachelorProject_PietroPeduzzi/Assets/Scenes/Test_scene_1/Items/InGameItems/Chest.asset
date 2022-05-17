@@ -19,4 +19,5 @@ MonoBehaviour:
   itemMeshCollider: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   itemMaterial: {fileID: 2100000, guid: bc3bdebd58b6a464980ad82998d8768c, type: 2}
   itemDescription: A container to store resources.
+  itemIcon: {fileID: 21300000, guid: bdc55e3fedc8f7c48a67f988b7e41c41, type: 3}
   isEdible: 0

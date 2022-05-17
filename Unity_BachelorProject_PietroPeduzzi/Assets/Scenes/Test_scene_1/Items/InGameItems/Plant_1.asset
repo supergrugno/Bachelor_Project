@@ -19,4 +19,5 @@ MonoBehaviour:
   itemMeshCollider: {fileID: -6761343574292438970, guid: 071d9f030cf16874dae0c35f79ecee5c, type: 3}
   itemMaterial: {fileID: 2100000, guid: a5be11081ba964e49baa855c081d53e6, type: 2}
   itemDescription: It seems to be consumable but not very filling.
+  itemIcon: {fileID: 21300000, guid: 2667561c7b8e2f143a641f5ed5cffd79, type: 3}
   isEdible: 1

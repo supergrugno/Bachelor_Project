@@ -19,4 +19,5 @@ MonoBehaviour:
   itemMeshCollider: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   itemMaterial: {fileID: 2100000, guid: f7bedf0024cb44b4eb8b0a1d1b5490ac, type: 2}
   itemDescription: A piece of raw stone.
+  itemIcon: {fileID: 21300000, guid: 07d17c9f6ca13a545b34ce534cac5059, type: 3}
   isEdible: 0

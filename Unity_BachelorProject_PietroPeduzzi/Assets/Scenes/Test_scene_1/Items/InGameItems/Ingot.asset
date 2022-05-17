@@ -19,4 +19,5 @@ MonoBehaviour:
   itemMeshCollider: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   itemMaterial: {fileID: 2100000, guid: c91f09e0f63329f4e9c5126a3aa60104, type: 2}
   itemDescription: A refined piece of metal.
+  itemIcon: {fileID: 21300000, guid: e30e52182d9660d47a8846c09c4de71a, type: 3}
   isEdible: 0
