@@ -18,6 +18,7 @@ public class O2ManagerBubble : MonoBehaviour
     {
         StaticValues.oxygenInBubble = BubbleStartOxygen;
         playerO2ManagerReference = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerO2Manager>();
+        StaticValues.maxOxygenInBubble = maxOxygen;
     }
 
     private void Update()
