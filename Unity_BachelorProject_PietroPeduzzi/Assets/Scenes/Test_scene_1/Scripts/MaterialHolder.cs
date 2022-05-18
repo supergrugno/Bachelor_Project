@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MaterialHolder : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class MaterialHolder : MonoBehaviour
 
     public float loadBarMax = 5;
     private float loadBarState = 0;
+
+    [SerializeField] private Slider _slider;
+    [SerializeField] private GameObject Bbutton;
 
     [SerializeField] private ParticleSystem cloudPS;
 
@@ -43,6 +47,7 @@ public class MaterialHolder : MonoBehaviour
             if (playerMovementReference._isDigging)
             {
                 loadBarState += Time.deltaTime * StaticValues.miningSpeed;
+                _slider.value = loadBarState/loadBarMax;
                 if(loadBarState >= loadBarMax)
                 {
                     DropReource();
@@ -62,10 +67,24 @@ public class MaterialHolder : MonoBehaviour
         newItem.GetComponent<Rigidbody>().AddForce((gameObject.transform.right + gameObject.transform.up), ForceMode.Impulse);
 
         CreateCloud();
+        _slider.value = 0;
+
+        if (totalMaterialsMined == maxMaterials) EndResources();
     }
 
     private void CreateCloud()
     {
         cloudPS.Play();
+    }
+
+    private void EndResources()
+    {
+        gameObject.GetComponent<BoxCollider>().enabled = false;
+        GameObject _player = GameObject.FindGameObjectWithTag("Player");
+        _player.GetComponent<PlayerMovement>()._canDig = false;
+        _player.GetComponent<PlayerMovement>()._isDigging = false;
+        _player.GetComponent<PlayerMovement>().animator.SetBool("IsDigging", false);
+
+        Bbutton.SetActive(false);
     }
 }

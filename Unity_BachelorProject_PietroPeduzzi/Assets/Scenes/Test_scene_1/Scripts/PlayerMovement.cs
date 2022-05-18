@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody rb;
 
     //animations
-    private Animator animator;
+    public Animator animator;
     private float animVelocity;
     private int velocityHash;
     private bool hasObjectInHand;
