@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Plant_3
   m_EditorClassIdentifier: 
   crafterPrefab: {fileID: 0}
-  itemName: A plant
+  itemName: Plant
   itemDurability: 3
   itemMesh: {fileID: 8247008268046285122, guid: a501076d249184543ae84966bab079a1, type: 3}
   itemMeshCollider: {fileID: 8247008268046285122, guid: a501076d249184543ae84966bab079a1, type: 3}

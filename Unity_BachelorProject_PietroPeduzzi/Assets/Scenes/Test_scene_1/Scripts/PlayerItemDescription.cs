@@ -11,11 +11,15 @@ public class PlayerItemDescription : MonoBehaviour
     private bool descriptionCanvasIsActive = false;
     //[SerializeField] private TextMeshProUGUI itemDescription;
     [SerializeField] private Image itemSprite;
+    [SerializeField] private GameObject itemNameTextGameObject;
+    [SerializeField] private TextMeshProUGUI itemNameText;
+    private string itemNamePlaceHolderText;
 
     private void Start()
     {
         descriptionCanvasIsActive = false;
         descriptionCanvas.SetActive(false);
+        itemNamePlaceHolderText = itemNameText.text;
     }
     private void Update()
     {
@@ -23,6 +27,8 @@ public class PlayerItemDescription : MonoBehaviour
         {
             //itemDescription.text = playerInventoryReference.CurrentObjectRigidBody.gameObject.GetComponent<ItemDisplay>().item.itemDescription;
             itemSprite.sprite = playerInventoryReference.CurrentObjectRigidBody.gameObject.GetComponent<ItemDisplay>().item.itemIcon;
+
+            ShowItemName();
         }
         
         ShowItemDescription();
@@ -30,6 +36,7 @@ public class PlayerItemDescription : MonoBehaviour
         {
             descriptionCanvas.SetActive(false);
             descriptionCanvasIsActive = false;
+            itemNameText.text = "";
         }
     }
 
@@ -47,6 +54,18 @@ public class PlayerItemDescription : MonoBehaviour
                 descriptionCanvasIsActive = false;
             }
 
+        }
+    }
+
+    private void ShowItemName()
+    {
+        itemNamePlaceHolderText = playerInventoryReference.CurrentObjectRigidBody.gameObject.GetComponent<ItemDisplay>().item.itemName;
+        if (itemNamePlaceHolderText != itemNameText.text)
+        {
+            //play animation
+            itemNameTextGameObject.GetComponent<Animator>().SetTrigger("TextAnimation");
+
+            itemNameText.text = itemNamePlaceHolderText;
         }
     }
 }

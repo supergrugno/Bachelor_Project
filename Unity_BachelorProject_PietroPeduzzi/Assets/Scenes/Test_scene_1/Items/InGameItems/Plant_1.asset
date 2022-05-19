@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Plant_1
   m_EditorClassIdentifier: 
   crafterPrefab: {fileID: 0}
-  itemName: Carbon based substance
+  itemName: Seed
   itemDurability: 1
   itemMesh: {fileID: -6761343574292438970, guid: 071d9f030cf16874dae0c35f79ecee5c, type: 3}
   itemMeshCollider: {fileID: -6761343574292438970, guid: 071d9f030cf16874dae0c35f79ecee5c, type: 3}

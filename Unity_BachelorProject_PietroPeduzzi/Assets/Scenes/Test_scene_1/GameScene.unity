@@ -27689,8 +27689,9 @@ GameObject:
   - component: {fileID: 702845588}
   - component: {fileID: 702845590}
   - component: {fileID: 702845589}
+  - component: {fileID: 702845591}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: ItemNameText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27713,8 +27714,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -199.4}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 0, y: -251.32408}
+  m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &702845589
 MonoBehaviour:
@@ -27813,6 +27814,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 702845587}
   m_CullTransparentMesh: 1
+--- !u!95 &702845591
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702845587}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 72a5859ceae511c448c082927821853f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -41286,7 +41307,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aac9de035d0927e4aba3ed83563314cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemNameText: {fileID: 702845589}
   recipesToActivate_HardStone:
   - {fileID: 1382408116}
   recipesToActivate_WoodPlanks:
@@ -54430,6 +54450,8 @@ MonoBehaviour:
   playerInventoryReference: {fileID: 1481770095}
   descriptionCanvas: {fileID: 662877188}
   itemSprite: {fileID: 2105652702}
+  itemNameTextGameObject: {fileID: 702845587}
+  itemNameText: {fileID: 702845589}
 --- !u!1 &1481961217
 GameObject:
   m_ObjectHideFlags: 0
@@ -72620,7 +72642,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.7781124, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: O2_Plant_broken
   m_EditorClassIdentifier: 
   crafterPrefab: {fileID: 0}
-  itemName: Plant in a pot Broken
+  itemName: Broken O2 Capsule
   itemDurability: 0
   itemMesh: {fileID: -4683470370224748728, guid: 8ff10e8de56433f4fb3eb6c02f62bd0c, type: 3}
   itemMeshCollider: {fileID: -3393789367161023315, guid: 6cc7b782c8ca2944eb52485957b88477, type: 3}
   itemMaterial: {fileID: 2100000, guid: 2d6273ce7788d7943b14f7bc60a60bae, type: 2}
   itemDescription: This plant will produce O2 overtime if placed in a chest.
+  itemIcon: {fileID: 0}
   isEdible: 0

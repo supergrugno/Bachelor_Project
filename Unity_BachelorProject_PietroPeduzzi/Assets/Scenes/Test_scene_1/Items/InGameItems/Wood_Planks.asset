@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Wood_Planks
   m_EditorClassIdentifier: 
   crafterPrefab: {fileID: 0}
-  itemName: Wood planks
+  itemName: Wood Planks
   itemDurability: 0
   itemMesh: {fileID: 8750361782047028729, guid: cfee96abd0a71164f9381734285d48e4, type: 3}
   itemMeshCollider: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}

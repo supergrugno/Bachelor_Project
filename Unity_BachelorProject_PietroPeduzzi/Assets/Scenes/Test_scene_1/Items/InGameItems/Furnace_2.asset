@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Furnace_2
   m_EditorClassIdentifier: 
   crafterPrefab: {fileID: 485388715679092692, guid: 42aa2d14e60a2c7448fa359639ecf9bd, type: 3}
-  itemName: Furnace advanced
+  itemName: Advanced Furnace
   itemDurability: 0
   itemMesh: {fileID: 3926380919799947217, guid: d9e7d43931f65e94aa8898ae62d576bd, type: 3}
   itemMeshCollider: {fileID: 3926380919799947217, guid: d9e7d43931f65e94aa8898ae62d576bd, type: 3}

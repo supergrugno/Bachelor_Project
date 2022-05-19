@@ -1,11 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
 public class RecipesFoundScript : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI itemNameText;
     [SerializeField] private GameObject[] recipesToActivate_HardStone;
     [SerializeField] private GameObject[] recipesToActivate_WoodPlanks;
     [SerializeField] private GameObject[] recipesToActivate_Furnace1;

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: O2_Plant_2
   m_EditorClassIdentifier: 
   crafterPrefab: {fileID: 0}
-  itemName: Plant in a pot
+  itemName: O2 Capsule Medium
   itemDurability: 270
   itemMesh: {fileID: 8378469530796314886, guid: 0a1da680e5ba2c6499e28321d21e9f60, type: 3}
   itemMeshCollider: {fileID: -4817748934980871234, guid: 38eedda5deaade549910a0d8fe24673a, type: 3}

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Plant_2
   m_EditorClassIdentifier: 
   crafterPrefab: {fileID: 0}
-  itemName: Refined bio-substance
+  itemName: Semi Germinated Seed
   itemDurability: 2
   itemMesh: {fileID: -2454654986661593396, guid: 766c60729167a3d47be0755d0e064040, type: 3}
   itemMeshCollider: {fileID: -2454654986661593396, guid: 766c60729167a3d47be0755d0e064040, type: 3}
