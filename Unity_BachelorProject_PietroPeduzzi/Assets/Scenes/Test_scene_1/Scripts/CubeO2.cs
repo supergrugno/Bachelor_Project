@@ -21,7 +21,7 @@ public class CubeO2 : MonoBehaviour
 
         if(colorInOrder < colors.Length)
         {
-            actualColor = Color.Lerp(objMaterial.material.color, colors[colorInOrder], 0.1f * Time.deltaTime);
+            actualColor = Color.Lerp(objMaterial.material.color, colors[colorInOrder], 0.2f * Time.deltaTime);
             objMaterial.material.color = actualColor;
         }
     }
