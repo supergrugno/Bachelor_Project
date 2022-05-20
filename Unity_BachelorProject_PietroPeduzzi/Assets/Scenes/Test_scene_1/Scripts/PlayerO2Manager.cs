@@ -6,7 +6,7 @@ public class PlayerO2Manager : MonoBehaviour
 {
     [SerializeField] private float playerStartOxygen = 10;
     [SerializeField] public float playerMaxOxygen = 10;
-    [SerializeField] private float oxygenDeploySpeed = 1;
+    [SerializeField] public float oxygenDeploySpeed = 1;
 
     [SerializeField] private float _maxPlayerHP = 20;
 

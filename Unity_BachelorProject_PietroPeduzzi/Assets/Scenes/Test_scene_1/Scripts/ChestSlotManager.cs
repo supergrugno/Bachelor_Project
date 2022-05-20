@@ -9,6 +9,11 @@ public class ChestSlotManager : MonoBehaviour
 
     [SerializeField] private SlotManager slotManagerReference;
     [SerializeField] private string O2plantTemplate;
+
+    [SerializeField] private ItemTemplate o2plant_1;
+    [SerializeField] private ItemTemplate o2plant_2;
+    [SerializeField] private ItemTemplate o2plant_3;
+
     [SerializeField] private string O2fanTemplate;
 
     [SerializeField] private float oxygenPusOverTime = 1.5f;
@@ -18,7 +23,9 @@ public class ChestSlotManager : MonoBehaviour
     {
         if (slotManagerReference.slotIsFull)
         {
-            if (slotManagerReference.slotObjectRigidBody.GetComponent<ItemDisplay>().item.itemName == O2plantTemplate)
+            if (slotManagerReference.slotObjectRigidBody.GetComponent<ItemDisplay>().item == o2plant_1 ||
+                slotManagerReference.slotObjectRigidBody.GetComponent<ItemDisplay>().item == o2plant_2 ||
+                slotManagerReference.slotObjectRigidBody.GetComponent<ItemDisplay>().item == o2plant_3)
             {
                 if (slotManagerReference.slotObjectRigidBody.GetComponent<ItemDisplay>().itemDurabilityRemaining > 0)
                 {

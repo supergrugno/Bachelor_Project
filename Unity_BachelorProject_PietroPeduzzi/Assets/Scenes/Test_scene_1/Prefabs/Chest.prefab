@@ -173,6 +173,9 @@ MonoBehaviour:
   O2_fan_broken: {fileID: 11400000, guid: 5794079f2f9fae846b00feeff8cb2f9d, type: 2}
   slotManagerReference: {fileID: 485388715635520878}
   O2plantTemplate: Plant in a pot
+  o2plant_1: {fileID: 11400000, guid: 4544f615dd5f4e44288c12ab88b73863, type: 2}
+  o2plant_2: {fileID: 11400000, guid: e54efb814d58ec944aef7a5fa81e6b7d, type: 2}
+  o2plant_3: {fileID: 11400000, guid: 9f400cb3142758e4cb19c839a0559213, type: 2}
   O2fanTemplate: O2 Fan
   oxygenPusOverTime: 1.5
   oxygenMinusOverTime: 1
@@ -435,6 +438,9 @@ MonoBehaviour:
   O2_fan_broken: {fileID: 11400000, guid: 5794079f2f9fae846b00feeff8cb2f9d, type: 2}
   slotManagerReference: {fileID: 485388715849286149}
   O2plantTemplate: Plant in a pot
+  o2plant_1: {fileID: 11400000, guid: 4544f615dd5f4e44288c12ab88b73863, type: 2}
+  o2plant_2: {fileID: 11400000, guid: e54efb814d58ec944aef7a5fa81e6b7d, type: 2}
+  o2plant_3: {fileID: 11400000, guid: 9f400cb3142758e4cb19c839a0559213, type: 2}
   O2fanTemplate: O2 Fan
   oxygenPusOverTime: 1.5
   oxygenMinusOverTime: 1
