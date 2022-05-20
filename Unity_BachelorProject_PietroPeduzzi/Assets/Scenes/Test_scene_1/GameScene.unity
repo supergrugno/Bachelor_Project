@@ -14384,8 +14384,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigTargetMaxDistance: {fileID: 894772579}
-  legSwingDistance: 4
-  startDistance: -2
+  legSwingDistance: 5
+  startDistance: -1
   footstepSpeed: 0.05
 --- !u!1 &154456160
 GameObject:
@@ -19684,7 +19684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigTargetMaxDistance: {fileID: 1204991830}
-  legSwingDistance: 4
+  legSwingDistance: 5
   startDistance: -2
   footstepSpeed: 0.05
 --- !u!1 &369004732
@@ -20588,7 +20588,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigTargetMaxDistance: {fileID: 542445578}
-  legSwingDistance: 4
+  legSwingDistance: 5
   startDistance: 0
   footstepSpeed: 0.05
 --- !u!1001 &406485640
@@ -55604,7 +55604,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigTargetMaxDistance: {fileID: 516789932}
-  legSwingDistance: 4
+  legSwingDistance: 5
   startDistance: -2.5
   footstepSpeed: 0.05
 --- !u!1001 &1187911674
@@ -66301,8 +66301,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigTargetMaxDistance: {fileID: 1717709443}
-  legSwingDistance: 4
-  startDistance: -0.5
+  legSwingDistance: 5
+  startDistance: -1
   footstepSpeed: 0.05
 --- !u!4 &1491086126
 Transform:
@@ -69157,7 +69157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigTargetMaxDistance: {fileID: 727523979}
-  legSwingDistance: 4
+  legSwingDistance: 5
   startDistance: 0
   footstepSpeed: 0.05
 --- !u!4 &1572068158
@@ -89622,7 +89622,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7801048, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
