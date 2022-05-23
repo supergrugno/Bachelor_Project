@@ -30,10 +30,12 @@ public class RecipeController : MonoBehaviour
             {
                 recipesIsOpen = false;
                 anim.SetBool("OpenRecipes", true);
+                Time.timeScale = 0;
             }else if (!recipesIsOpen)
             {
                 recipesIsOpen = true;
                 anim.SetBool("OpenRecipes", false);
+                Time.timeScale = 1;
             }
         }
     }
