@@ -93408,7 +93408,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7774141, y: 1}
+    m_SensorSize: {x: 1.7751938, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -110230,7 +110230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64fd404c873cb804baa0125e24761e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BubbleStartOxygen: 380
+  BubbleStartOxygen: 390
   maxOxygen: 400
   playerO2ManagerReference: {fileID: 0}
   O2_BubbleHead: {fileID: 1332762541}

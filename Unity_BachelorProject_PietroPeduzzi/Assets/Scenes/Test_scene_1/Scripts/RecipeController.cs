@@ -12,7 +12,7 @@ public class RecipeController : MonoBehaviour
     private void Start()
     {
         recipesList[currentRecipe].SetActive(true);
-        recipesIsOpen = false;
+        recipesIsOpen = true;
         anim = gameObject.GetComponent<Animator>();
     }
 
@@ -42,7 +42,7 @@ public class RecipeController : MonoBehaviour
 
     private void NextRecipe()
     {
-        if (Input.GetButtonDown("NextRecipe"))
+        if (Input.GetButtonDown("NextRecipe") && !recipesIsOpen)
         {
             recipesList[currentRecipe].SetActive(false);
             if(currentRecipe == recipesList.Length-1)
