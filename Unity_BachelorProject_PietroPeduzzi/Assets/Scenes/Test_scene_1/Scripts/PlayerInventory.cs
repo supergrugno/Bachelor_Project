@@ -252,6 +252,7 @@ public class PlayerInventory : MonoBehaviour
         }
     }
 
+
     private void DeadDrop()
     {
         if (StaticValues.playerIsDead)

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class CrafterButton : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class CrafterButton : MonoBehaviour
     public ReduceO2 ReduceO2reference;
 
     [SerializeField] private float NecessaryPressTime = 2;
+    private float loadBarState = 0;
+    [SerializeField] Slider _slider;
+
     private float actualTimePressed;
     private bool playerIsOnThisButton = false;
     private bool buttonHasBeenPressed = false;
@@ -28,6 +32,7 @@ public class CrafterButton : MonoBehaviour
     {
         if (player.GetComponent<PlayerMovement>()._isPressingButton)
         {
+            _slider.value = actualTimePressed / NecessaryPressTime;
             actualTimePressed += Time.deltaTime;
             if (actualTimePressed >= NecessaryPressTime && buttonHasBeenPressed == false && playerIsOnThisButton)
             {
@@ -39,6 +44,7 @@ public class CrafterButton : MonoBehaviour
         }
         else if (!player.GetComponent<PlayerMovement>()._isPressingButton)
         {
+            _slider.value = 0;
             actualTimePressed = 0;
             buttonHasBeenPressed = false;
             animatorRef.SetBool("IsBeingPressed", false);
