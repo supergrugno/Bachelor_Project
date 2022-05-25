@@ -8,6 +8,7 @@ public class MainMenu : MonoBehaviour
 {
     [SerializeField] private GameObject mainCanvas;
     [SerializeField] private GameObject creditsCanvas;
+    [SerializeField] private GameObject controlsCanvas;
 
     [SerializeField] private GameObject mainCamera;
     [SerializeField] private Transform cameraPosition1;
@@ -15,7 +16,7 @@ public class MainMenu : MonoBehaviour
 
     [SerializeField] private string gameSceneName;
 
-    [SerializeField] private GameObject playButton, backButton, creditsButton;
+    [SerializeField] private GameObject playButton, backButton, creditsButton, controlsButton, backButton2;
 
     private void Start()
     {
@@ -24,6 +25,7 @@ public class MainMenu : MonoBehaviour
 
         mainCanvas.SetActive(true);
         creditsCanvas.SetActive(false);
+        controlsCanvas.SetActive(false);
 
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(playButton);
@@ -56,5 +58,29 @@ public class MainMenu : MonoBehaviour
 
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(creditsButton);
+    }
+
+    public void CloseCOntrols()
+    {
+        mainCamera.transform.position = cameraPosition1.position;
+        mainCamera.transform.rotation = cameraPosition1.rotation;
+
+        mainCanvas.SetActive(true);
+        controlsCanvas.SetActive(false);
+
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(controlsButton);
+    }
+
+    public void OpenControls()
+    {
+        mainCamera.transform.position = cameraPosition2.position;
+        mainCamera.transform.rotation = cameraPosition2.rotation;
+
+        mainCanvas.SetActive(false);
+        controlsCanvas.SetActive(true);
+
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(backButton2);
     }
 }
