@@ -22,12 +22,21 @@ public class MaterialHolder : MonoBehaviour
 
     [SerializeField] private ParticleSystem cloudPS;
 
+    [SerializeField] private GameObject[] visualModel;
+    [SerializeField] private GameObject visual_broken;
+
     private void Start()
     {
         playerObj = GameObject.FindGameObjectWithTag("Player");
         playerMovementReference = playerObj.GetComponent<PlayerMovement>();
 
         //itemBlueprint.GetComponent<ItemDisplay>().item = itemProduced;
+        foreach (var item in visualModel)
+        {
+            item.SetActive(false);
+        }
+        visualModel[Random.Range(0, visualModel.Length)].SetActive(true);
+        visual_broken.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -86,5 +95,10 @@ public class MaterialHolder : MonoBehaviour
         _player.GetComponent<PlayerMovement>().animator.SetBool("IsDigging", false);
 
         Bbutton.SetActive(false);
+        foreach (var item in visualModel)
+        {
+            item.SetActive(false);
+        }
+        visual_broken.SetActive(true);
     }
 }
