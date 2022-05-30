@@ -37,6 +37,8 @@ public class CrafterManager : MonoBehaviour
 
     //private bool recepyIsCorrect = false;
 
+    //SFX
+    [SerializeField] private AudioSource craftSound;
 
     //others
     [SerializeField] private Transform psLocation;
@@ -187,5 +189,7 @@ public class CrafterManager : MonoBehaviour
     private void CreateCloud()
     {
         Instantiate(cloudDustPS, psLocation.position, Quaternion.identity);
+        craftSound.pitch = UnityEngine.Random.Range(0.7f, 1);
+        craftSound.Play();
     }
 }

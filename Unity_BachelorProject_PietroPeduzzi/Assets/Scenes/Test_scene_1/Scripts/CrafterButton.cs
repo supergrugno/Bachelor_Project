@@ -20,6 +20,8 @@ public class CrafterButton : MonoBehaviour
 
     //animation
     private Animator animatorRef;
+    //sfx
+    [SerializeField] private AudioSource activationSound;
 
     private void Start()
     {
@@ -38,6 +40,8 @@ public class CrafterButton : MonoBehaviour
             {
                 ifButtonIsPressedEvent.Invoke();
                 buttonHasBeenPressed = true;
+                activationSound.pitch = Random.Range(0.8f, 1.2f);
+                activationSound.Play();
             }
 
             animatorRef.SetBool("IsBeingPressed", true);
