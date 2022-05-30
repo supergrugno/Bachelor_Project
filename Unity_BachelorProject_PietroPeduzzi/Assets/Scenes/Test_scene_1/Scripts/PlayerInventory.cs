@@ -29,6 +29,9 @@ public class PlayerInventory : MonoBehaviour
     //[SerializeField] private LayerMask checkXLayer;
     private GameObject lastObjCheckX;
 
+    //SFX
+    [SerializeField] private AudioSource pickupSound;
+
     private void Start()
     {
         animator = GetComponentInChildren<Animator>();
@@ -76,6 +79,9 @@ public class PlayerInventory : MonoBehaviour
                     animator.SetBool("Has Object", true);
                     animator.SetTrigger("PickUp");
                     hasObjectInHand = true;
+
+                    pickupSound.pitch = Random.Range(0.8f, 1);
+                    pickupSound.Play();
                 }
                 else
                 {
@@ -92,6 +98,9 @@ public class PlayerInventory : MonoBehaviour
                     animator.SetBool("Has Object", true);
                     animator.SetTrigger("PickUp");
                     hasObjectInHand = true;
+
+                    pickupSound.pitch = Random.Range(0.8f, 1);
+                    pickupSound.Play();
                 }
 
                 return;
@@ -119,6 +128,9 @@ public class PlayerInventory : MonoBehaviour
                     //animation
                     animator.SetBool("Has Object", false);
                     hasObjectInHand = false;
+
+                    pickupSound.pitch = Random.Range(0.5f, 0.8f);
+                    pickupSound.Play();
                 }
                 else if(!CurrentObjectRigidBody && slotReference.slotIsFull == true)
                 {
@@ -139,6 +151,9 @@ public class PlayerInventory : MonoBehaviour
                     animator.SetBool("Has Object", true);
                     animator.SetTrigger("PickUp");
                     hasObjectInHand = true;
+
+                    pickupSound.pitch = Random.Range(0.8f, 1);
+                    pickupSound.Play();
 
                     slotReference.slotIsFull = false;
                 }
@@ -172,6 +187,9 @@ public class PlayerInventory : MonoBehaviour
                     animator.SetBool("Has Object", true);
                     animator.SetTrigger("PickUp");
                     hasObjectInHand = true;
+
+                    pickupSound.pitch = Random.Range(0.8f, 1);
+                    pickupSound.Play();
                 }
 
                  return;
@@ -190,6 +208,9 @@ public class PlayerInventory : MonoBehaviour
                 //animation
                 animator.SetBool("Has Object", false);
                 hasObjectInHand = false;
+
+                pickupSound.pitch = Random.Range(0.5f, 0.8f);
+                pickupSound.Play();
 
                 CurrentObjectRigidBody = null;
                 CurrentObjectCollider = null;
@@ -215,6 +236,9 @@ public class PlayerInventory : MonoBehaviour
                 animator.SetBool("Has Object", false);
                 hasObjectInHand = false;
 
+                pickupSound.pitch = Random.Range(0.5f, 0.8f);
+                pickupSound.Play();
+
                 CurrentObjectRigidBody = null;
                 CurrentObjectCollider = null;
             }
@@ -237,6 +261,9 @@ public class PlayerInventory : MonoBehaviour
                     //animation
                     animator.SetBool("Has Object", false);
                     hasObjectInHand = false;
+
+                    pickupSound.pitch = Random.Range(0.5f, 0.8f);
+                    pickupSound.Play();
 
                     Destroy(CurrentObjectRigidBody.gameObject);
                     CurrentObjectRigidBody = null;
@@ -268,6 +295,9 @@ public class PlayerInventory : MonoBehaviour
                 //animation
                 animator.SetBool("Has Object", false);
                 hasObjectInHand = false;
+
+                pickupSound.pitch = Random.Range(0.5f, 0.8f);
+                pickupSound.Play();
 
                 CurrentObjectRigidBody = null;
                 CurrentObjectCollider = null;
