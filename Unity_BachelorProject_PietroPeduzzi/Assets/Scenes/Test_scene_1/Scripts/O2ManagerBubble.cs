@@ -14,6 +14,9 @@ public class O2ManagerBubble : MonoBehaviour
 
     public bool playerCompletedTutorial = false;
 
+    [SerializeField] private AudioSource entrySound;
+    [SerializeField] private AudioSource exitSound;
+
     private void Start()
     {
         StaticValues.oxygenInBubble = BubbleStartOxygen;
@@ -57,6 +60,9 @@ public class O2ManagerBubble : MonoBehaviour
             playerIsInBubble = true;
             O2_BubbleHead.GetComponent<Animator>().SetTrigger("Deactivate");
             vignetteCanvas.SetActive(false);
+
+            entrySound.pitch = Random.Range(0.8f, 1.1f);
+            entrySound.Play();
         }
     }
 
@@ -67,6 +73,9 @@ public class O2ManagerBubble : MonoBehaviour
             playerIsInBubble = false;
             O2_BubbleHead.GetComponent<Animator>().SetTrigger("Activate");
             vignetteCanvas.SetActive(true);
+
+            exitSound.pitch = Random.Range(0.8f, 1.1f);
+            exitSound.Play();
         }
     }
 

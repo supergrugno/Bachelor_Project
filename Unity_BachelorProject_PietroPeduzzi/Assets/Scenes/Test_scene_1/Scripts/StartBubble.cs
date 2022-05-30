@@ -8,6 +8,8 @@ public class StartBubble : MonoBehaviour
     [SerializeField] GameObject O2_BubbleHead;
     private bool playerIsInBubble = false;
     [SerializeField] GameObject vignetteCanvas;
+    [SerializeField] private AudioSource entrySound;
+    [SerializeField] private AudioSource exitSound;
 
     private void Start()
     {
@@ -30,6 +32,8 @@ public class StartBubble : MonoBehaviour
             playerIsInBubble = true;
             O2_BubbleHead.GetComponent<Animator>().SetTrigger("Deactivate");
             vignetteCanvas.SetActive(false);
+            entrySound.pitch = Random.Range(0.8f, 1.1f);
+            entrySound.Play();
         }
     }
 
@@ -40,6 +44,8 @@ public class StartBubble : MonoBehaviour
             playerIsInBubble = false;
             O2_BubbleHead.GetComponent<Animator>().SetTrigger("Activate");
             vignetteCanvas.SetActive(true);
+            exitSound.pitch = Random.Range(0.8f, 1.1f);
+            exitSound.Play();
         }
     }
 }
