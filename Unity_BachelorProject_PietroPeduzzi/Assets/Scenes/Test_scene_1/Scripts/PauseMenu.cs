@@ -14,6 +14,7 @@ public class PauseMenu : MonoBehaviour
     {
         escMenuOpen = false;
         pauseCanvas.SetActive(false);
+        Time.timeScale = 1;
     }
     private void Update()
     {
@@ -46,5 +47,11 @@ public class PauseMenu : MonoBehaviour
         escMenuOpen = false;
         pauseCanvas.SetActive(false);
         Time.timeScale = 1;
+    }
+
+    public void Restart()
+    {
+        escMenuOpen = false;
+        SceneManager.LoadScene("GameScene");
     }
 }

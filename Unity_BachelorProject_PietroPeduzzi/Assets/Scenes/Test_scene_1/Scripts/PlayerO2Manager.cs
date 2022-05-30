@@ -14,6 +14,8 @@ public class PlayerO2Manager : MonoBehaviour
     [SerializeField] private float ditance_2 = 200;
     [SerializeField] private float ditance_3 = 200;
 
+    [SerializeField] private GameObject fadeOutCanvas;
+
     //animations
     private Animator animator;
     
@@ -27,6 +29,7 @@ public class PlayerO2Manager : MonoBehaviour
 
         //animations
         animator = GetComponentInChildren<Animator>();
+        AudioListener.pause = false;
     }
 
     private void Update()
@@ -49,6 +52,15 @@ public class PlayerO2Manager : MonoBehaviour
         {
             animator.SetTrigger("Death");
             StaticValues.playerIsDead = true;
+            StartCoroutine(Wait());
         }
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(2);
+
+        fadeOutCanvas.SetActive(true);
+        AudioListener.pause = true;
     }
 }
