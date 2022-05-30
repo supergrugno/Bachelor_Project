@@ -19,6 +19,14 @@ public class ChestSlotManager : MonoBehaviour
     [SerializeField] private float oxygenPusOverTime = 1.5f;
     [SerializeField] private float oxygenMinusOverTime = 1f;
 
+    //SFX
+    [SerializeField] private AudioSource airLoopSound;
+
+    private void Start()
+    {
+        airLoopSound.volume = 0;
+    }
+
     private void Update()
     {
         if (slotManagerReference.slotIsFull)
@@ -31,10 +39,13 @@ public class ChestSlotManager : MonoBehaviour
                 {
                     StaticValues.oxygenInBubble += Time.fixedDeltaTime * oxygenPusOverTime;
                     slotManagerReference.slotObjectRigidBody.GetComponent<ItemDisplay>().itemDurabilityRemaining -= Time.fixedDeltaTime;
-                }else if(slotManagerReference.slotObjectRigidBody.GetComponent<ItemDisplay>().itemDurabilityRemaining <= 0)
+                    airLoopSound.volume = 1;
+                }
+                else if(slotManagerReference.slotObjectRigidBody.GetComponent<ItemDisplay>().itemDurabilityRemaining <= 0)
                 {
                     slotManagerReference.slotObjectRigidBody.GetComponent<ItemDisplay>().item = O2_plant_broken;
                     slotManagerReference.slotObjectRigidBody.GetComponent<ItemDisplay>().ResetItem();
+                    airLoopSound.volume = 0;
                 }
             }
             else if (slotManagerReference.slotObjectRigidBody.GetComponent<ItemDisplay>().item.itemName == O2fanTemplate)
