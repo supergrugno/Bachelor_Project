@@ -25,6 +25,9 @@ public class MaterialHolder : MonoBehaviour
     [SerializeField] private GameObject[] visualModel;
     [SerializeField] private GameObject visual_broken;
 
+    //audio
+    [SerializeField] private AudioSource dropSound;
+
     private void Start()
     {
         playerObj = GameObject.FindGameObjectWithTag("Player");
@@ -84,6 +87,9 @@ public class MaterialHolder : MonoBehaviour
     private void CreateCloud()
     {
         cloudPS.Play();
+
+        dropSound.pitch = Random.Range(0.6f, 1);
+        dropSound.Play();
     }
 
     private void EndResources()
