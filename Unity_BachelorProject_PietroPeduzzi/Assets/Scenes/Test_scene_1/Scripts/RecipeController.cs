@@ -8,6 +8,7 @@ public class RecipeController : MonoBehaviour
     private int currentRecipe = 0;
     private bool recipesIsOpen = false;
     private Animator anim;
+    [SerializeField] private AudioSource menuSound;
 
     private void Start()
     {
@@ -31,11 +32,18 @@ public class RecipeController : MonoBehaviour
                 recipesIsOpen = false;
                 anim.SetBool("OpenRecipes", true);
                 Time.timeScale = 0;
-            }else if (!recipesIsOpen)
+
+                menuSound.pitch = Random.Range(0.5f, 1);
+                menuSound.Play();
+            }
+            else if (!recipesIsOpen)
             {
                 recipesIsOpen = true;
                 anim.SetBool("OpenRecipes", false);
                 Time.timeScale = 1;
+
+                menuSound.pitch = Random.Range(0.5f, 1);
+                menuSound.Play();
             }
         }
     }
@@ -55,6 +63,9 @@ public class RecipeController : MonoBehaviour
                 currentRecipe += 1;
                 recipesList[currentRecipe].SetActive(true);
             }
+
+            menuSound.pitch = Random.Range(0.5f, 1);
+            menuSound.Play();
         }
     }
 }
