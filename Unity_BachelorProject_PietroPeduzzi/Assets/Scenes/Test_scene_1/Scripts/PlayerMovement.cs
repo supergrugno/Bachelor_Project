@@ -31,6 +31,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private ParticleSystem dustPS_2;
     private bool isRunning = false;
 
+    //SFX
+    [SerializeField] private AudioSource footstepSound;
+    [SerializeField] private AudioSource jumpSound;
+
     private void Start()
     {
         rb = this.gameObject.GetComponent<Rigidbody>();
@@ -42,6 +46,9 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         velocityHash = Animator.StringToHash("Velocity");
         StaticValues.isLookingRight = true;
+
+        //SFX
+        footstepSound.volume = 0;
     }
 
     void Update()
@@ -97,6 +104,9 @@ public class PlayerMovement : MonoBehaviour
         //move player
         Vector3 MoveVector = transform.TransformDirection(PlayerMovementInput) * moveSpeed * Time.deltaTime;
         rb.velocity = new Vector3(MoveVector.x, rb.velocity.y, MoveVector.z);
+
+        if (rb.velocity.magnitude >= 0.1f && isGrounded()) footstepSound.volume = 1;
+        else footstepSound.volume = 0;
     }
 
     private void Digging()
@@ -143,6 +153,8 @@ public class PlayerMovement : MonoBehaviour
             //animation
             animator.SetBool("IsJumping", true);
             CreateDust(2);
+            jumpSound.pitch = Random.Range(0.8f, 1.2f);
+            jumpSound.Play();
         }
     }
 
