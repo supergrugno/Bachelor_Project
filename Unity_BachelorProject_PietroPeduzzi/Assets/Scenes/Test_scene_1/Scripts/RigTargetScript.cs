@@ -9,6 +9,9 @@ public class RigTargetScript : MonoBehaviour
     [SerializeField] private float startDistance = 0;
     [SerializeField] private float footstepSpeed = 0.1f;
 
+    [SerializeField] private AudioSource animalFootstepSound;
+    private bool playedSound = false;
+
     private Vector3 slerpBeforeTransform;
 
     private void Start()
@@ -24,5 +27,11 @@ public class RigTargetScript : MonoBehaviour
         }
         transform.position = Vector3.MoveTowards(transform.position, slerpBeforeTransform, footstepSpeed);
         //transform.position = new Vector3(Mathf.MoveTowards(transform.position.x, slerpBeforeTransform.x, footstepSpeed), transform.position.y, transform.position.z);
+        if (transform.position == slerpBeforeTransform && !playedSound)
+        {
+            animalFootstepSound.Play();
+            playedSound = true;
+        }
+        else if (transform.position != slerpBeforeTransform && playedSound) playedSound = false;
     }
 }
