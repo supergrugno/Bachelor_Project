@@ -7,6 +7,7 @@ TagManager:
   - PickUpObject
   - Rock
   - PressX
+  - AnimalEye
   layers:
   - Default
   - TransparentFX
