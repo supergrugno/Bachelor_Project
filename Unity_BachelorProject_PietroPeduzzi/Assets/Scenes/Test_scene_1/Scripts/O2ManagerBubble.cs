@@ -17,6 +17,8 @@ public class O2ManagerBubble : MonoBehaviour
     [SerializeField] private AudioSource entrySound;
     [SerializeField] private AudioSource exitSound;
 
+    [SerializeField] private AudioSource breathingSound;
+
     private void Start()
     {
         StaticValues.oxygenInBubble = BubbleStartOxygen;
@@ -63,6 +65,7 @@ public class O2ManagerBubble : MonoBehaviour
 
             entrySound.pitch = Random.Range(0.8f, 1.1f);
             entrySound.Play();
+            breathingSound.volume = 0;
         }
     }
 
@@ -76,6 +79,7 @@ public class O2ManagerBubble : MonoBehaviour
 
             exitSound.pitch = Random.Range(0.8f, 1.1f);
             exitSound.Play();
+            breathingSound.volume = 0.3f;
         }
     }
 

@@ -11,10 +11,13 @@ public class StartBubble : MonoBehaviour
     [SerializeField] private AudioSource entrySound;
     [SerializeField] private AudioSource exitSound;
 
+    [SerializeField] private AudioSource breathingSound;
+
     private void Start()
     {
         playerO2ManagerReference = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerO2Manager>();
         vignetteCanvas.SetActive(false);
+        breathingSound.volume = 0;
     }
 
     private void Update()
@@ -34,6 +37,7 @@ public class StartBubble : MonoBehaviour
             vignetteCanvas.SetActive(false);
             entrySound.pitch = Random.Range(0.8f, 1.1f);
             entrySound.Play();
+            breathingSound.volume = 0;
         }
     }
 
@@ -46,6 +50,7 @@ public class StartBubble : MonoBehaviour
             vignetteCanvas.SetActive(true);
             exitSound.pitch = Random.Range(0.8f, 1.1f);
             exitSound.Play();
+            breathingSound.volume = 0.3f;
         }
     }
 }
