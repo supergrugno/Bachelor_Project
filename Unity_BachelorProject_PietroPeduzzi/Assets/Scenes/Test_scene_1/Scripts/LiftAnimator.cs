@@ -11,10 +11,21 @@ public class LiftAnimator : MonoBehaviour
 
     private bool playerIsOnPlatform = false;
 
+    [SerializeField] private AudioSource pulleySound;
+
     private void Update()
     {
         if(playerIsOnPlatform) transform.position = Vector3.MoveTowards(transform.position, pointUp.transform.position, platformSpeed * Time.deltaTime);
         else transform.position = Vector3.MoveTowards(transform.position, pointDown.transform.position, platformSpeed * 1.5f * Time.deltaTime);
+
+        if(transform.position == pointDown.transform.position || transform.position == pointUp.transform.position)
+        {
+            pulleySound.volume = 0;
+        }
+        else
+        {
+            pulleySound.volume = 0.6f;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
