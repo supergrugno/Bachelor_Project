@@ -27161,6 +27161,8 @@ Transform:
   m_Children:
   - {fileID: 3834385671626258650}
   - {fileID: 390918410}
+  - {fileID: 1162773517}
+  - {fileID: 1489214403}
   m_Father: {fileID: 707990841}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -27180,6 +27182,8 @@ MonoBehaviour:
   minSize: 0.5
   o2ManagerBubbleReference: {fileID: 4502941979487838819}
   O2_bubble: {fileID: 4502941979487838816}
+  bubbleNormalTransform: {fileID: 1162773517}
+  bubbleOffTransform: {fileID: 1489214403}
 --- !u!1001 &483730249
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49636,7 +49640,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 993.1, y: 1.5, z: 43}
+  m_LocalPosition: {x: 172.31, y: 1.5, z: 43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -56208,6 +56212,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cfee96abd0a71164f9381734285d48e4, type: 3}
   m_PrefabInstance: {fileID: 1162437389}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1162773516
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1162773517}
+  m_Layer: 0
+  m_Name: BubbleNormalPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1162773517
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162773516}
+  m_LocalRotation: {x: 0.4995161, y: -0.50048345, z: 0.49951467, w: 0.5004849}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 908.29803, y: 908.29803, z: 908.29803}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 483398957}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1165382074
 GameObject:
   m_ObjectHideFlags: 0
@@ -70440,7 +70475,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1481770087}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 993.1, y: 0.5, z: 50}
+  m_LocalPosition: {x: 172.31, y: 0.5, z: 50}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -70728,6 +70763,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3769022452898908555, guid: d48d820281c702d40998188b7bbd1f5d, type: 3}
   m_PrefabInstance: {fileID: 1487935856}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1489214402
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1489214403}
+  m_Layer: 0
+  m_Name: BubbleOffPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1489214403
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489214402}
+  m_LocalRotation: {x: 0.4995161, y: -0.50048345, z: 0.49951467, w: 0.5004849}
+  m_LocalPosition: {x: -0.003982544, y: -34.86962, z: 0}
+  m_LocalScale: {x: 908.29803, y: 908.29803, z: 908.29803}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 483398957}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1490117475
 GameObject:
   m_ObjectHideFlags: 0
@@ -98480,7 +98546,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7765043, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -98497,7 +98563,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1979306500}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 993.1, y: 1.5, z: 43}
+  m_LocalPosition: {x: 172.31, y: 1.5, z: 43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -117467,8 +117533,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64fd404c873cb804baa0125e24761e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BubbleStartOxygen: 390
-  maxOxygen: 400
+  BubbleStartOxygen: 20
+  maxOxygen: 30
   playerO2ManagerReference: {fileID: 0}
   O2_BubbleHead: {fileID: 1332762541}
   vignetteCanvas: {fileID: 694470352}

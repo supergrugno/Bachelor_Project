@@ -62,5 +62,7 @@ public class ChestSlotManager : MonoBehaviour
                 }
             }
         }
+
+        if(!slotManagerReference.slotIsFull) airLoopSound.volume = 0;
     }
 }
