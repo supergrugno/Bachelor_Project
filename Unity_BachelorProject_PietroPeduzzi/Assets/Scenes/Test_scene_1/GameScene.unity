@@ -17090,7 +17090,7 @@ PrefabInstance:
     - target: {fileID: 6472271759127941733, guid: 52600ab63783ee844b733bad02d6178e, type: 3}
       propertyPath: m_VideoClip
       value: 
-      objectReference: {fileID: 32900000, guid: 74c207a344d26d7409d4853e2196256b, type: 3}
+      objectReference: {fileID: 32900000, guid: cb674283fc4a6f343940387816d0c396, type: 3}
     - target: {fileID: 6472271759127941733, guid: 52600ab63783ee844b733bad02d6178e, type: 3}
       propertyPath: m_AudioOutputMode
       value: 2
@@ -98546,7 +98546,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.3333334, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
