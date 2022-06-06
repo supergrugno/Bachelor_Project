@@ -29,6 +29,8 @@ public class MainMenu : MonoBehaviour
 
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(playButton);
+
+        Time.timeScale = 1;
     }
 
     public void StartGame()
